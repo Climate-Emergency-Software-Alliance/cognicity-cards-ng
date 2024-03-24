@@ -1,0 +1,30 @@
+{
+    "production": false,
+    "stage": "dev",
+    "deployment": "pk",
+    "country_code":"pk",
+    "supported_languages": ["en"],
+    "default_language": "en",
+    "mapbox_access_token": "pk.eyJ1IjoicGV0YWJlbmNhbmEiLCJhIjoiY2s2MjF1cnZmMDlxdzNscWc5MGVoMTRkeCJ9.PGcoQqU6lBrcLfBmvTrWrQ",
+    "data_server": "http://localhost:3000/dev/",
+    "app": "http://localhost:3000/dev/",
+    "default_location": {
+      "lat": 24.805563,
+      "lng": 67.0329815
+      
+    },
+    "loc_search_suffix": ", Pakistan",
+    "decks": [{
+        "name": "flood",
+        "cards": [
+          "location",
+          "depth",
+          "photo",
+          "description",
+          "review",
+          "thank"
+        ]
+      }
+    ]
+  }
+  
