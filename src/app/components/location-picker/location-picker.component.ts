@@ -157,7 +157,6 @@ export class LocationPickerComponent implements OnInit {
     const { lat, lng } = this.map.getCenter();
    
 
-    console.log({ lat, lng })
     const imageElement = document.createElement('div');
 
     imageElement.className = 'marker';

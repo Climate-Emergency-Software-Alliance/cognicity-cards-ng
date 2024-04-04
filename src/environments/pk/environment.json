@@ -6,8 +6,8 @@
     "supported_languages": ["en"],
     "default_language": "en",
     "mapbox_access_token": "pk.eyJ1IjoicGV0YWJlbmNhbmEiLCJhIjoiY2s2MjF1cnZmMDlxdzNscWc5MGVoMTRkeCJ9.PGcoQqU6lBrcLfBmvTrWrQ",
-    "data_server": "http://localhost:3000/dev/",
-    "app": "http://localhost:3000/dev/",
+    "data_server": "https://dev-api.tabahinaqsha.pk/",
+    "app": "https://dev.tabahinaqsha.pk",
     "default_location": {
       "lat": 24.805563,
       "lng": 67.0329815
