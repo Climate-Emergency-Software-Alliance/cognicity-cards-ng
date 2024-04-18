@@ -45,7 +45,7 @@
     "build-prod-id": "dep=id npm run pre-build-tasks && ng build --prod --configuration=prod-id --output-path='dist/prod-id' --build-optimizer --vendor-chunk=true --stats-json",
     "build-dev-ph": "dep=ph npm run pre-build-tasks && ng build --configuration=dev-ph --output-path='dist/dev-ph'",
     "build-prod-ph": "dep=ph npm run pre-build-tasks && ng build --prod --configuration=prod-ph --output-path='dist/prod-ph' --build-optimizer --vendor-chunk=true --stats-json",
-    "build-dev-pk": "export dep=pk; npm run pre-build-tasks && ng build --configuration=dev-pk --output-path='dist/dev-pk'"
+    "build-dev-pk": "dep=pk npm run pre-build-tasks && ng build --configuration=dev-pk --output-path='dist/dev-pk'"
   },
   "private": true,
   "dependencies": {
