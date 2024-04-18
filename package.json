@@ -24,7 +24,7 @@
     "ng": "ng",
     "start": "./set-dep.sh dep=id npm run pre-build-tasks && ng serve",
     "start-ph": "./set-dep.sh dep=ph npm run pre-build-tasks && ng serve",
-    "start-pk": "export dep=pk npm run pre-build-tasks && ng serve",
+    "start-pk": "export dep=pk;npm run pre-build-tasks && ng serve",
     "serve-prod": "dep=id npm run pre-build-tasks && ng serve --prod",
     "serve-prod-ngsw": "npm run build-prod-ngsw && http-server dist/prod-us -p 8080",
     "test": "ng test",
@@ -45,7 +45,7 @@
     "build-prod-id": "dep=id npm run pre-build-tasks && ng build --prod --configuration=prod-id --output-path='dist/prod-id' --build-optimizer --vendor-chunk=true --stats-json",
     "build-dev-ph": "dep=ph npm run pre-build-tasks && ng build --configuration=dev-ph --output-path='dist/dev-ph'",
     "build-prod-ph": "dep=ph npm run pre-build-tasks && ng build --prod --configuration=prod-ph --output-path='dist/prod-ph' --build-optimizer --vendor-chunk=true --stats-json",
-    "build-dev-pk": "dep=pk npm run pre-build-tasks && ng build --configuration=dev-pk --output-path='dist/dev-pk'"
+    "build-dev-pk": "export dep=pk; npm run pre-build-tasks && ng build --configuration=dev-pk --output-path='dist/dev-pk'"
   },
   "private": true,
   "dependencies": {
