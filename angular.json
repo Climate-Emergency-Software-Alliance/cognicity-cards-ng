@@ -85,6 +85,14 @@
                 }
               ]
             },
+            "dev-pk": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/pk/environment.ts"
+                }
+              ]
+            },
             "prod-id": {
               "optimization": true,
               "outputHashing": "all",
@@ -149,6 +157,9 @@
             },
             "prod-id": {
               "browserTarget": "Cards:build:prod-id"
+            },
+            "dev-pk": {
+              "browserTarget": "Cards:build:dev-pk"
             }
           }
         },
