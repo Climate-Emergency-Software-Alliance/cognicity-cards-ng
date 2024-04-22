@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-type-button',
@@ -11,6 +11,8 @@ export class TypeButtonComponent {
   @Input() imgUrl: string;
   @Input() highlightImgUrl: string;
   @Input() isCentered: boolean = false;
+
+  @ViewChild('img') img;
 
   onMouseEnter(img: HTMLImageElement) {
     img.setAttribute('src', this.highlightImgUrl);
