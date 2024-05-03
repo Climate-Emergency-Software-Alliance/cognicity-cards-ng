@@ -57,7 +57,7 @@ export class DeckService {
   description = '';
   inputValue = [];
   sub_submission = false;
-  captchaCleared = false;
+  captchaCleared = true;
   preview: File;
 
   isPrevButtonDisabled = true;
