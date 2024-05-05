@@ -296,7 +296,7 @@ export class DeckService {
     this.preview = preview;
   }
   setCaptchaNotCleared() {
-    this.captchaCleared = false;
+    // this.captchaCleared = false;
   }
   setCaptchaCleared() {
     this.captchaCleared = true;
@@ -320,7 +320,7 @@ export class DeckService {
     this.evacuationArea = null;
     this.description = '';
     this.preview = undefined;
-    this.captchaCleared = false;
+    this.captchaCleared = true;
     this.imageSignedUrl = 'url_error';
     this.partnerCode = '';
   }
