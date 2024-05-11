@@ -1,27 +1,27 @@
 {
     "terms": {
-      "userAgreement": "User Agreement",
-      "privacy": "Privacy policy"
+      "userAgreement": "صارف کا معاہدہ",
+      "privacy": "رازداری کی پالیسی"
     },
     "validationErrors": {
-      "noPhoto": "A photo OR description is required to make a report",
-      "unsupportedLocation": "Unsupported location, report cannot be displayed on the map"
+      "noPhoto": "رپورٹ بنانے کے لیے تصویر یا تفصیل درکار ہے۔",
+      "unsupportedLocation": "غیر تعاون یافتہ مقام، رپورٹ نقشے پر ظاہر نہیں کی جا سکتی"
     },
     "deck": {
-      "prev": "PREV",
-      "next": "NEXT"
+      "prev": "پچھلا",
+      "next": "اگلا"
     },
     "search": {
-      "placeholder": "Click & Drag to Move Pin or Search Here",
-      "locateText": "Show me where I am"
+      "placeholder": "جگہ منتخب  کرنے کے لیےپن کو حلایں یا یہاں پر لکھ کر تلاش کریں",
+      "locateText": "مجھے دکھائیں کہ میں کہاں ہوں۔"
     },
     "card": {
-      "yes": "yes",
-      "no": "no",
+      "yes": "جی ہاں",
+      "no": "نہیں",
       "titles": {
-        "type": "Select Report Type",
-        "location": "Select Report Location",
-        "depth": "Select flood depth",
+        "type": "رپورٹ کی قسم منتخب کریں۔",
+        "location": "رپورٹ کی جگہ منتخب کریں",
+        "depth": "سیلاب کی کی گہرائی منتخب کریں",
         "fireestimate": "Report Fire Extent",
         "firedistance": "Your Location and Fire Location",
         "airquality": "Report Air Quality",
@@ -38,14 +38,14 @@
         "evacuationnumber": "Report Evacuation",
         "evacuationarea": "Report Evacuation",
   
-        "photo": "Upload a Photo",
-        "description": "Tell us more",
-        "review": "Review & Submit",
-        "thank": "Thank you!",
+        "photo": "تصویر اپلوڈ کریں",
+        "description": "ہمیں اور مبتائیں",
+        "review": "جائزہ کریں اور جمع کروائیں",
+        "thank": "شکریہ!",
   
-        "region": "Select region(s) to receive notifications for",
-        "summary": "Review & Submit",
-        "thankyou": "Thank You!"
+        "region": "اطلاعات موصول کرنے کے لیے علاقہ (علاقوں) کو منتخب کریں۔",
+        "summary": "جائزہ کریں اور جمع کروائیں",
+        "thankyou": "شکریہ!"
       },
       "type": {
         "fire": {
@@ -145,7 +145,7 @@
         ],
         "review": ["Low Disruption", "Medium Disruption", "High Disruption"]
       },
-      "description": "Add your description here ...",
+      "description": "مزیدتفصیلات یہاں لکھیں",
       "review": {
         "text": "By submitting this report you are agreeing to the ",
         "terms": "User agreement & Privacy policy",
@@ -169,8 +169,8 @@
           "training": "SUCCESS TRAINING"
         },
         "url":{
-          "real" : "https://www.tabahinaqsha.pk",
-          "training" : ""
+          "real" : "https://tabahinaqsha.pk",
+          "training" : "https://training.tabahinaqsha.pk"
         },
         "urlText":"tabahinaqsha.pk",
         "title": {
@@ -213,4 +213,3 @@
     "forgot_partner_subject": "Forgot tabahinaqsha.pk Partner Code",
     "forgot_partner_body": "Hi tabahinaqsha.pk My name is [enter your name] from [enter your organization]. I have forgotten my partner code and/or I would like to gain access to a Partner Code to be able to report disasters as an official partner representative of tabahinaqsha.pk ,Thank you."
   }
-  
