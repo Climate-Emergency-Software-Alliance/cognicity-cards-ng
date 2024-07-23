@@ -11,12 +11,15 @@ button {
   height: 40px;
   font-size: 14px;
   margin: 10px;
-  border-radius: 5px;
-  border: 1px solid white;
   cursor: pointer;
   transition: background-color .5s;
-  background-color: rgba(66, 66, 66, 0.3);
-  color: white;
+
+  border-radius: 100px;
+  border: 1px solid #F1F1F1;
+  background: #FFF;
+  box-shadow: 0px 73.673px 21.228px 0px rgba(0, 0, 0, 0.00), 0px 47.451px 18.73px 0px rgba(0, 0, 0, 0.01), 0px 26.223px 16.233px 0px rgba(0, 0, 0, 0.03), 0px 12.487px 12.487px 0px rgba(0, 0, 0, 0.04), 0px 2.497px 6.243px 0px rgba(0, 0, 0, 0.05);
+
+  color: #285642;
   outline: none;
   -webkit-tap-highlight-color: transparent;
 

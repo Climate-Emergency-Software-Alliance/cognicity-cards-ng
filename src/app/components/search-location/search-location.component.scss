@@ -17,6 +17,10 @@ $search-comp-width: 60%;
     display: flex;
 
     .search-location-form__input {
+      border-radius: 56.772px;
+      border: 1px solid #F1F1F1;
+      background: var(--Grayscale-White, #FFF);
+
       height: 60px;
       font-size: 16px;
       padding-left: 20px;
@@ -24,8 +28,13 @@ $search-comp-width: 60%;
       flex: 1;
     }
 
-    .search-location-form__btn{
-
+    .search-location-form__btn {
+      border: none;
+      background: transparent;
+      // position: absolute;
+      // right: 255px;
+      // top: 20px;
+      color: #285642;
     }
   }
 
