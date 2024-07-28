@@ -96,7 +96,7 @@
     "@types/geojson": "^7946.0.4",
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
-    "@types/lodash": "^4.14.161",
+    "@types/lodash": "4.14.116",
     "@types/node": "^10.12.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
