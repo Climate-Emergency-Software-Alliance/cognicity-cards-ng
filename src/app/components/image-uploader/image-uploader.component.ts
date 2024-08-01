@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DeckService } from '../../services/cards/deck.service'
 
 @Component({
@@ -7,6 +7,7 @@ import { DeckService } from '../../services/cards/deck.service'
   styleUrls: ['./image-uploader.component.scss']
 })
 export class ImageUploaderComponent implements OnInit {
+  @ViewChild('file') fileInput: ElementRef<HTMLInputElement>;
   rotateDeg: number = 0
 
   constructor(private deckService: DeckService) {}
@@ -40,5 +41,9 @@ export class ImageUploaderComponent implements OnInit {
 
   deletePreview() {
     this.deckService.setPreview(undefined)
+  }
+
+  selectFile() {
+    this.fileInput.nativeElement.click();
   }
 }

@@ -1,4 +1,4 @@
-<label id="image-uploader-label" for="image-uploader-button">
+<label id="image-uploader-label">
   <i 
     class="material-icons" id="image-uploader-icon" 
     *ngIf="!isImageSelected"
@@ -6,12 +6,22 @@
     photo_camera
   </i>
   <img 
-    [ngStyle]="{ 'transform': 'rotate(' + rotateDeg + 'deg)' }" 
+    [ngStyle]="{ 'transform': 'rotate(' + rotateDeg + 'deg)' }"
     id="image-uploader-picture" alt="" *ngIf="isImageSelected"
   >
+  <i 
+    id="image-uploader-edit-icon"
+    class="material-icons"
+    *ngIf="isImageSelected">
+    edit
+  </i>
 </label>
 
-<div id="image-uploader-divider">
+<div class="buttonContainer">
+  <button class="uploadButton" (click)="selectFile()">Upload Photo</button>
+</div>
+
+<!-- <div id="image-uploader-divider">
   <div id="image-uploader-divider__left">
     <label for="image-uploader-button">
       <i 
@@ -36,7 +46,8 @@
       delete
     </i>
   </div>
-</div>
+</div> -->
+
 <input 
   (change)="onFileChanged($event)" 
   type="file" accept="image/*" id="image-uploader-button" #file

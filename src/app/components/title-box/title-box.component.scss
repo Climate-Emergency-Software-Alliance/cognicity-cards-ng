@@ -199,6 +199,7 @@
   z-index: 999;
 
   .tabs {
+    border: 1px solid #E0E0E0;
     display: flex;
     flex-grow: 1;
     margin: 0px 10px;
@@ -206,7 +207,6 @@
     width: 73px;
     height: 11px;
     border-radius: 10px;
-    border: 1px;
 
     &.filled {
       background-color: #2B7054;

@@ -7,6 +7,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  .backgroundSelectionContainer {
+    height: 9vh;
+    width: 159px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .depthText {
+    margin-bottom: 3vh;
+    border-radius: 11.842px;
+    background: #2B7054;
+    color: #FFF;
+    text-align: center;
+    font-family: Wasa;
+    font-size: 15.789px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 22.105px */
+    padding: 4px 17px;
+  }
 
   .cardContentWrapper{
     position: relative;
@@ -55,6 +77,7 @@
         height: 20px;
         bottom: 0;
         width: 20.67px;
+        top: 1px;
         height: 20.67px;
         // background-color: #31aade;
         background: var(--Gradient, linear-gradient(180deg, #C1F0FF 0%, #5EC4E4 42.5%, #2DB3DD 100%));

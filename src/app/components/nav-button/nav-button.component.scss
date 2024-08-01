@@ -12,6 +12,7 @@ button {
   font-size: 14px;
   margin: 10px;
   cursor: pointer;
+  font-weight: 600;
   transition: background-color .5s;
 
   border-radius: 100px;
@@ -28,13 +29,13 @@ button {
   }
 
   &:disabled {
-    color: #888;
+    opacity: 50%;
   }
 
   &.button-default {
     &:focus{
       outline: none;
-      background-color: rgb(37, 150, 190);
+      background: #285642;
       border: none;
       color: white;
     }
@@ -42,7 +43,7 @@ button {
 
   &:focus {
     outline: none;
-    background-color: rgba(66, 66, 66, 0.3);
+    background: #285642;
     color: white;
   }
 
@@ -52,7 +53,8 @@ button {
 
   &:active {
     outline: none;
-    background: #5e5e5e;
+    color: white;
+    background: #285642;
     transform: translateY(1px);
     border-bottom: 0;
   }

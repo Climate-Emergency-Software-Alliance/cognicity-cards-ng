@@ -1,6 +1,6 @@
 @import '../../../styles/mixins.scss';
 
-$search-comp-width: 60%;
+$search-comp-width: 70%;
 
 .search-location-form {
   display: flex;
@@ -8,7 +8,7 @@ $search-comp-width: 60%;
   align-items: center;
   position: absolute;
   top: 83px;
-  right: 35px;
+
   z-index: 1000;
   width: 100%;
 

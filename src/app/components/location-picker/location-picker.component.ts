@@ -189,7 +189,7 @@ export class LocationPickerComponent implements OnInit {
   get icon() {
     switch (this.type) {
       case 'flood':
-        return '../../../assets/decks/flood/AddFloodIcon_Location.png'
+        return '../../../assets/decks/flood/location_pin.svg'
       case 'structure':
         return '../../../assets/decks/earthquake/eqlocation/AddStructureFailureIcon_Location.png'
       case 'road':

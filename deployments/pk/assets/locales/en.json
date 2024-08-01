@@ -8,11 +8,11 @@
       "unsupportedLocation": "Unsupported location, report cannot be displayed on the map"
     },
     "deck": {
-      "prev": "PREV",
-      "next": "NEXT"
+      "prev": "Back",
+      "next": "Next"
     },
     "search": {
-      "placeholder": "Click & Drag to Move Pin or Search Here",
+      "placeholder": "Search Here...",
       "locateText": "Show me where I am"
     },
     "card": {
@@ -20,8 +20,8 @@
       "no": "no",
       "titles": {
         "type": "Select Report Type",
-        "location": "Select Report Location",
-        "depth": "Select flood depth",
+        "location": "Move the pin to your location or search below",
+        "depth": "Slide the rainwater up or down to indicate depth",
         "fireestimate": "Report Fire Extent",
         "firedistance": "Your Location and Fire Location",
         "airquality": "Report Air Quality",
@@ -38,7 +38,7 @@
         "evacuationnumber": "Report Evacuation",
         "evacuationarea": "Report Evacuation",
   
-        "photo": "Upload a Photo",
+        "photo": "Upload a photo that shows rain condition",
         "description": "Tell us more",
         "review": "Review & Submit",
         "thank": "Thank you!",
