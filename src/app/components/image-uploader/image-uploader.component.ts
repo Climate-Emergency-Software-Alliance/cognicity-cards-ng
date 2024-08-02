@@ -39,7 +39,9 @@ export class ImageUploaderComponent implements OnInit {
     this.deckService.userCanContinue();
   }
 
-  openImageEditDialog() {
+  openImageEditDialog($event) {
+    $event.preventDefault();
+    
     const dialogRef = this.dialog.open(ImageEditorDialogComponent, {
       data: { image: this.cachedFile ? this.cachedFile : this.fileInput.nativeElement.files[0] }
     });

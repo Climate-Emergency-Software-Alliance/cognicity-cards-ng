@@ -12,8 +12,8 @@
     id="image-uploader-edit-icon"
     class="material-icons"
     *ngIf="isImageSelected"
-    (touchend)="openImageEditDialog()"
-    (click)="openImageEditDialog()">
+    (touchend)="openImageEditDialog($event)"
+    (click)="openImageEditDialog($event)">
     edit
   </i>
 </label>
