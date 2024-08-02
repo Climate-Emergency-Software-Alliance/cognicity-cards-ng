@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DeckService } from '../../services/cards/deck.service'
+import { MatDialog } from '@angular/material';
+import { ImageEditorDialogComponent } from '../image-editor-dialog/image-editor-dialog.component';
 
 @Component({
   selector: 'app-image-uploader',
@@ -10,11 +12,20 @@ export class ImageUploaderComponent implements OnInit {
   @ViewChild('file') fileInput: ElementRef<HTMLInputElement>;
   rotateDeg: number = 0
 
-  constructor(private deckService: DeckService) {}
+  cachedFile = undefined
+
+  constructor(
+    private deckService: DeckService,
+    public dialog: MatDialog
+  ) {}
 
   ngOnInit() {
-    if (this.isImageSelected)
-      this.setImagePreview(this.deckService.getPreview())
+    this.cachedFile = this.deckService.getPreview();
+    if (this.cachedFile) {
+      this.setImagePreview(this.cachedFile);
+    } else {
+      this.deckService.userCannotContinue();
+    }
   }
 
   get isImageSelected(): boolean {
@@ -25,6 +36,25 @@ export class ImageUploaderComponent implements OnInit {
     this.setImagePreview(event.target.files[0])
     this.deckService.setPreview(event.target.files[0] as File)
     this.deckService.updateSignedUrl(event.target.files[0] as File)
+    this.deckService.userCanContinue();
+  }
+
+  openImageEditDialog() {
+    const dialogRef = this.dialog.open(ImageEditorDialogComponent, {
+      data: { image: this.cachedFile ? this.cachedFile : this.fileInput.nativeElement.files[0] }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.deckService.setPreview(result);
+        this.deckService.updateSignedUrl(result);
+        this.setImagePreview(result);
+        this.deckService.userCanContinue();
+      } else {
+        this.deckService.setPreview(undefined);
+        this.deckService.userCannotContinue();
+      }
+    });
   }
 
   setImagePreview(file) {
@@ -33,10 +63,6 @@ export class ImageUploaderComponent implements OnInit {
       document.getElementById('image-uploader-picture').setAttribute('src', e.target.result)
     }
     reader.readAsDataURL(file)
-  }
-
-  rotateImage() {
-    this.rotateDeg += 90
   }
 
   deletePreview() {

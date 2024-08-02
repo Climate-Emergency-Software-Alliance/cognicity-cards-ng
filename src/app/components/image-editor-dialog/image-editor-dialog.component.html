@@ -1,0 +1,28 @@
+<div class="dialogHeading">
+  Edit Photo
+</div>
+<div mat-dialog-content>
+  <div style="position: relative;">
+
+    <image-cropper
+    style="max-width: 266px; max-height: 243px;"
+    [imageBase64]="selectedImage"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="1 / 1"
+    [resizeToWidth]="128"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()"
+    (loadImageFailed)="loadImageFailed()"
+    ></image-cropper>
+
+    <div class="editIcons">
+      <i class="material-icons" (click)="delete()">delete</i>
+      <i class="material-icons">refresh</i>
+    </div>
+  </div>
+</div>
+
+<div class="dialogActions">
+    <button class="saveButton" (click)="save()">Save</button>
+</div>

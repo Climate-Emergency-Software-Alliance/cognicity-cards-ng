@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { ErrorComponent } from './routes/error/error.component';
 import { ThanksComponent } from './routes/thanks/thanks.component';
 import { DepthBgComponent } from './components/depth-bg/depth-bg.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, '../../../../assets/locales/', '.json');
@@ -27,6 +28,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     DepthBgComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

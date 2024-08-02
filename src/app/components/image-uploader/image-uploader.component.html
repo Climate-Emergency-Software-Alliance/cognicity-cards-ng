@@ -6,13 +6,13 @@
     photo_camera
   </i>
   <img 
-    [ngStyle]="{ 'transform': 'rotate(' + rotateDeg + 'deg)' }"
     id="image-uploader-picture" alt="" *ngIf="isImageSelected"
   >
   <i 
     id="image-uploader-edit-icon"
     class="material-icons"
-    *ngIf="isImageSelected">
+    *ngIf="isImageSelected"
+    (click)="openImageEditDialog()">
     edit
   </i>
 </label>

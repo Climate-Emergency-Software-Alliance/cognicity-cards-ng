@@ -1,0 +1,36 @@
+.dialogHeading {
+    color: #285642;
+    text-align: center;
+    font-size: 18.526px;
+    text-align: center;
+    font-style: normal;
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 140%; /* 25.937px */
+}
+
+.editIcons {
+    color: #CACACA;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.dialogActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saveButton {
+    width: 135.105px;
+    height: 36.671px;
+    padding: 6.668px 28.951px;
+    gap: 9.65px;
+    border-radius: 27.024px;
+    background: #004F24;
+    color: #fff;
+    border: none;
+    box-shadow: 0px 56.937px 16.406px 0px rgba(0, 0, 0, 0.00), 0px 36.671px 14.476px 0px rgba(0, 0, 0, 0.01), 0px 20.266px 12.545px 0px rgba(0, 0, 0, 0.03), 0px 9.65px 9.65px 0px rgba(0, 0, 0, 0.04), 0px 1.93px 4.825px 0px rgba(0, 0, 0, 0.05);
+}
