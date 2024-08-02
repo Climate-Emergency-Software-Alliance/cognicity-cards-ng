@@ -39,7 +39,7 @@
         "evacuationarea": "Report Evacuation",
   
         "photo": "Upload a photo that shows rain condition",
-        "description": "Tell us more",
+        "description": "Add a description (optional)",
         "review": "Review & Submit",
         "thank": "Thank you!",
   
@@ -145,7 +145,7 @@
         ],
         "review": ["Low Disruption", "Medium Disruption", "High Disruption"]
       },
-      "description": "Add your description here ...",
+      "description": "Enter description here...",
       "review": {
         "text": "By submitting this report you are agreeing to the ",
         "terms": "User agreement & Privacy policy",

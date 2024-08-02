@@ -1,4 +1,5 @@
-<textarea 
+<div class="textBoxContainer">
+  <textarea 
   #desc
   name="textbox"
   class="textbox" 
@@ -6,9 +7,12 @@
   [value]="description" 
   (input)="onChangeDescription($event.target.value)"
   [maxLength]="MAX_LENGTH"
->
-</textarea>
-<div class="bottom">
+  ></textarea>
+  <div class="characterCounterContainer">
+    <span class="characterCounter">{{MAX_LENGTH - description.length}}/{{MAX_LENGTH}} characters</span>
+  </div>
+</div>
+<!-- <div class="bottom">
   <div class="icons">
     <i
       class="material-icons"
@@ -27,5 +31,5 @@
   <div class="counter" *ngIf="description.length > 0">
     {{ description.length }} / {{ MAX_LENGTH }}
   </div>
-</div>
+</div> -->
 
