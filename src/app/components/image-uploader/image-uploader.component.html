@@ -12,6 +12,7 @@
     id="image-uploader-edit-icon"
     class="material-icons"
     *ngIf="isImageSelected"
+    (touch)="openImageEditDialog()"
     (click)="openImageEditDialog()">
     edit
   </i>
