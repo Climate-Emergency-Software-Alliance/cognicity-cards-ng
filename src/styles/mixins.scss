@@ -54,13 +54,13 @@ $boxshadow-pressed: 2px 3px 6px 0px rgba(0, 0, 0, 0.4);
 
 //_Font styles Variables_
 @mixin bodylight-mixin($var){
-  font-family: "Roboto-Light", "Roboto", Open Sans;
+  font-family: 'Wasa-Light';
   font-size: $var;
   color: $steel-gray;
 }
 
 @mixin bodyregular-mixin($var){
-  font-family: "Roboto", "Roboto", Open Sans;
+  font-family: 'Wasa';
   font-size: $var;
   color: $steel-gray;
 }
@@ -72,13 +72,13 @@ $boxshadow-pressed: 2px 3px 6px 0px rgba(0, 0, 0, 0.4);
 }
 
 @mixin bodybold-mixin($var){
-  font-family: "Roboto-Bold", "Roboto", Open Sans;
+  font-family: 'Wasa-Bold';
   font-size: $var;
   color: $steel-gray;
 }
 
 @mixin linklight-mixin($var){
-  font-family: "Roboto-Light", "Roboto", Open Sans;
+  font-family: 'Wasa-Light';
   font-size: $var;
   color: $steel-gray;
   cursor: pointer;

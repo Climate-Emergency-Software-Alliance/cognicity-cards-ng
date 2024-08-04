@@ -3,6 +3,21 @@
 @import '~material-design-icons/iconfont/material-icons.css';
 @import "mapbox-gl/dist/mapbox-gl.css";
 
+@font-face {
+  font-family: 'Wasa';
+  src: url(assets/fonts/Wasa-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Wasa-Light';
+  src: url(assets/fonts/Wasa-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Wasa-Bold';
+  src: url(assets/fonts/Wasa-Bold.otf) format("opentype");
+}
+
 html, body {
   top: 0;
   left: 0;
@@ -11,7 +26,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Wasa';
   // background-color: #808080
 }
 

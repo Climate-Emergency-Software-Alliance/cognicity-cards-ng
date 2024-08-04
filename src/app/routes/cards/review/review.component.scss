@@ -113,10 +113,10 @@
       color: white;
       margin: auto;
       width: 85%;
-      font-family: "Roboto-Light", "Roboto", Open Sans;
+      font-family: 'Wasa-Light';
       font-size: 12px;
       & a {
-        font-family: "Roboto-Light", "Roboto", Open Sans;
+        font-family: 'Wasa-Light';
         font-size: 12px;
         cursor: pointer;
         @media (min-width: 420px) {
@@ -128,7 +128,7 @@
       }
       & p {
         .header {
-          font-family: "Roboto", "Roboto", Open Sans;
+          font-family: 'Wasa';
           font-size: 14px;
           text-transform: uppercase;
         }
@@ -150,7 +150,7 @@
     text-align: right;
     & p {
       line-height: 24px;
-      font-family: "Roboto-Light", "Roboto", Open Sans;
+      font-family: 'Wasa-Light';
       font-size: 12px;
       cursor: pointer;
       @media (min-width: 420px) {
