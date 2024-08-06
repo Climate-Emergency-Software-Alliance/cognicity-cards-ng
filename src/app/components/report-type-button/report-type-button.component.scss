@@ -1,7 +1,7 @@
 .report-type {
-  cursor: pointer;
 
   .reportType_button-main {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +24,7 @@
   }
 
   .reportType_button {
+    cursor: pointer;
     margin-top: 24px;
     color: #FFF;
     text-align: center;
