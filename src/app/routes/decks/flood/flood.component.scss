@@ -3,13 +3,35 @@
   text-align: center;
 }
 
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: clamp(15rem, 95%, 25rem);
-  transform: translate(-50%,-50%);
+.reportTypeSelectionContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
   z-index: 1030;
-  opacity: 90%;
-  width: 100%;
+  background: #285642;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reportTypeSelectionContainer_top-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reportTypeSelectionContainer_middle-container {
+  flex-grow: 2;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.reportTypeSelectionContainer_bottom-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

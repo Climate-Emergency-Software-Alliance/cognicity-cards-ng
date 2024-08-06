@@ -15,6 +15,7 @@ export class FloodComponent implements OnInit {
   items: {
     title: string;
     subType: 'real' | 'training';
+    className: string;
   }[];
   showReportTypeButton: boolean = true
 
@@ -55,10 +56,12 @@ export class FloodComponent implements OnInit {
       {
         title: 'card.type.report.realTypeButton',
         subType: 'real',
+        className: 'reportType_button-main'
       },
       {
         title: 'card.type.report.trainingTypeButton',
         subType: 'training',
+        className: 'reportType_button'
       },
     ];
   }

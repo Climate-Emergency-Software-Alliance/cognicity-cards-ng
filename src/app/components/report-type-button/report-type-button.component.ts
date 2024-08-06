@@ -6,5 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./report-type-button.component.scss'],
 })
 export class ReportTypeButtonComponent {
+  @Input() className: string;
+
   @Input() title: string;
 }
