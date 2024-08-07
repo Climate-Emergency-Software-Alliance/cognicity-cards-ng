@@ -4,7 +4,7 @@
             title="{{option.title}}"
             description="{{option.description}}"
             imageUrl="{{option.imageUrl}}"
-            selected="option.selected"
+            [selected]="option.selected"
             (onClick)="onSelect($event)">
         ></app-checklist-item>
     </ng-container>

@@ -8,19 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class ChecklistComponent implements OnInit {
   options = [
     {
-      title: 'Saad Ahmed',
+      title: 'Saad Ahmed 1',
       description: 'My name is Saad Ahmed Siddiqui',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },
     {
-      title: 'Saad Ahmed',
+      title: 'Saad Ahmed 2',
       description: 'My name is Saad Ahmed Siddiqui',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },
     {
-      title: 'Saad Ahmed',
+      title: 'Saad Ahmed 3',
       description: 'My name is Saad Ahmed Siddiqui',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
@@ -32,10 +32,12 @@ export class ChecklistComponent implements OnInit {
   ngOnInit() { }
 
   onSelect($event) {
-    this.options.forEach(option => {
+    this.options = this.options.map(option => {
       if (option.title === $event.title && option.description === $event.description) {
         option.selected = !option.selected;
       }
+
+      return option;
     });
   }
 
