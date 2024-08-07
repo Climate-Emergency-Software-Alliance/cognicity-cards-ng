@@ -16,7 +16,7 @@
   "decks": [
     {
       "name": "flood",
-      "cards": ["location", "depth", "photo", "description", "review", "thank"]
+      "cards": ["location", "depth", "photo", "checklist", "description", "review", "thank"]
     }
   ]
 }

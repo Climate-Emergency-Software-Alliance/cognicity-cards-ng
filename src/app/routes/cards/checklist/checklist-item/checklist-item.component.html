@@ -1,0 +1,18 @@
+<div
+    (click)="onSelectItem($event)"
+    [ngClass]="{
+        'checklistItem': true,
+        'checklistItem__container': true,
+        'checklistItem__container-selected': selected
+    }"
+    [ngStyle]="{
+        'background-image': 'url(' + imageUrl + ')'
+    }"
+>
+    <input type="checkbox" class="checklistItem__checkbox" [checked]="selected">
+
+    <div class="checklistItem__textContainer">
+        <h3 class="checklistItem__textContainer-title">{{title}}</h3>
+        <p class="checklistItem__textContainer-description">{{description}}</p>
+    </div>
+</div>

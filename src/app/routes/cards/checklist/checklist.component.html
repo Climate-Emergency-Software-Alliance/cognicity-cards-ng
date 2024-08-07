@@ -1,0 +1,11 @@
+<div class="checklistItems__container">
+    <ng-container *ngFor="let option of options">
+        <app-checklist-item
+            title="{{option.title}}"
+            description="{{option.description}}"
+            imageUrl="{{option.imageUrl}}"
+            selected="option.selected"
+            (onClick)="onSelect($event)">
+        ></app-checklist-item>
+    </ng-container>
+</div>
