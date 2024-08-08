@@ -15,7 +15,9 @@ export class TextBoxComponent {
   ) {}
 
   onChangeDescription(desc: string) {
-    this.deckService.setDescription(desc)
+    if (desc.length <= 140) {
+      this.deckService.setDescription(desc)
+    }
   }
 
   onDisableButtonClick() {

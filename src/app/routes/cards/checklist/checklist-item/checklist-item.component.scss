@@ -8,14 +8,6 @@
   background-size: 170px 170px;
   font-family: 'Wasa-Bold';
 
-  &__checkbox {
-    position: absolute;
-    width: 26.063px;
-    height: 26.063px;
-    top: 12px;
-    left: 10px;
-  }
-
   &__container {
     display: flex;
     border-radius: 6.95px;
@@ -34,6 +26,14 @@
     background-repeat: no-repeat;
     background-size: 170px 170px;
     background-blend-mode: multiply;
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 26.063px;
+    height: 26.063px;
+    top: 12px;
+    left: 10px;
   }
 
   &__textContainer {

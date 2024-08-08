@@ -14,8 +14,21 @@ export class DepthSliderComponent implements OnInit {
 
   constructor(private deckService: DeckService) {}
 
-  womanBackgroundSelectorImage = '/assets/decks/flood/depth-bg-selector-woman.svg';
-  manBackgroundSelectorImage = '/assets/decks/flood/depth-bg-selector-man-selected.svg';
+  images = {
+    man: {
+      sliderBackgroundImage: 'assets/decks/flood/depth-bg-man.svg',
+      selectorImage: '/assets/decks/flood/depth-bg-selector-man.svg',
+      selectorImageSelected: '/assets/decks/flood/depth-bg-selector-man-selected.svg'
+    },
+    woman: {
+      sliderBackgroundImage: 'assets/decks/flood/depth-bg-woman.svg',
+      selectorImage: '/assets/decks/flood/depth-bg-selector-woman.svg',
+      selectorImageSelected: '/assets/decks/flood/depth-bg-selector-woman-selected.svg'
+    }
+  }
+
+  womanBackgroundSelectorImage = this.images.woman.selectorImage;
+  manBackgroundSelectorImage = this.images.man.selectorImageSelected;
 
   knobClass: string = '';
   dragContainerOffsetTop: number = 0;
@@ -47,27 +60,30 @@ export class DepthSliderComponent implements OnInit {
     this.dragContainerOffsetTop = top;
     this.dragContainerHeight = ((bottom - top));
 
-    // if (this.deckService.getFloodDepth()) {
-    //   this.currentY = this.deckService.getFloodDepth() / 2;
-    //   const { inches, feet } = this.toFeet(((this.currentY)));
-    //   this.depthText = `${feet} ${inches}`;
-    //   this.deckService.userCanContinue();
-    // }
-    // else {
-    //   this.deckService.setFloodDepth(Math.round(this.currentY * 2));
-    // }
+
+    if (this.deckService.getFloodDepth()) {
+      this.currentY = this.deckService.getFloodDepth();
+      const { inches, feet } = this.toFeet(((this.currentY)));
+      this.depthText = `${feet} ${inches}`;
+      this.deckService.userCanContinue();
+    } else {
+      const halfHeight = (bottom - top) / 2;
+      this.currentY = this.calcPercentInverted(halfHeight, this.dragContainerHeight);
+      const { inches, feet } = this.toFeet(((this.currentY)));
+      this.depthText = `${feet} ${inches}`;
+    }
   }
 
   setManBackgroundImage() {
-    this.imageElement.nativeElement.src = 'assets/decks/flood/depth-bg-man.svg';
-    this.manBackgroundSelectorImage = '/assets/decks/flood/depth-bg-selector-man-selected.svg'
-    this.womanBackgroundSelectorImage = '/assets/decks/flood/depth-bg-selector-woman.svg'
+    this.imageElement.nativeElement.src = this.images.man.sliderBackgroundImage;
+    this.manBackgroundSelectorImage = this.images.man.selectorImageSelected;
+    this.womanBackgroundSelectorImage = this.images.woman.selectorImage;
   }
 
   setWomanBackgroundImage() {
-    this.imageElement.nativeElement.src = 'assets/decks/flood/depth-bg-woman.svg';
-    this.manBackgroundSelectorImage = '/assets/decks/flood/depth-bg-selector-man.svg'
-    this.womanBackgroundSelectorImage = '/assets/decks/flood/depth-bg-selector-woman-selected.svg'
+    this.imageElement.nativeElement.src = this.images.woman.sliderBackgroundImage;
+    this.manBackgroundSelectorImage = this.images.man.selectorImage;
+    this.womanBackgroundSelectorImage = this.images.woman.selectorImageSelected;
   }
 
   dragStart($event) {

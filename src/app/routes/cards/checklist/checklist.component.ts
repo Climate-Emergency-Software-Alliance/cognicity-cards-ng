@@ -25,6 +25,24 @@ export class ChecklistComponent implements OnInit {
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },
+    {
+      title: 'Saad Ahmed4',
+      description: 'My name is Saad Ahmed Siddiqui',
+      imageUrl: 'assets/decks/flood/img.png',
+      selected: false
+    },
+    {
+      title: 'Saad Ahmed 5',
+      description: 'My name is Saad Ahmed Siddiqui',
+      imageUrl: 'assets/decks/flood/img.png',
+      selected: false
+    },
+    {
+      title: 'Saad Ahmed 6',
+      description: 'My name is Saad Ahmed Siddiqui',
+      imageUrl: 'assets/decks/flood/img.png',
+      selected: false
+    },
   ];
 
   constructor() { }

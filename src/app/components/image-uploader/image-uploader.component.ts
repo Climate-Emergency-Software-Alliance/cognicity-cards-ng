@@ -21,11 +21,7 @@ export class ImageUploaderComponent implements OnInit {
 
   ngOnInit() {
     this.cachedFile = this.deckService.getPreview();
-    if (this.cachedFile) {
-      this.setImagePreview(this.cachedFile);
-    } else {
-      this.deckService.userCannotContinue();
-    }
+    this.setImagePreview(this.cachedFile);
   }
 
   get isImageSelected(): boolean {
@@ -36,7 +32,7 @@ export class ImageUploaderComponent implements OnInit {
     this.setImagePreview(event.target.files[0])
     this.deckService.setPreview(event.target.files[0] as File)
     this.deckService.updateSignedUrl(event.target.files[0] as File)
-    this.deckService.userCanContinue();
+
   }
 
   openImageEditDialog($event) {
@@ -51,10 +47,8 @@ export class ImageUploaderComponent implements OnInit {
         this.deckService.setPreview(result);
         this.deckService.updateSignedUrl(result);
         this.setImagePreview(result);
-        this.deckService.userCanContinue();
       } else {
         this.deckService.setPreview(undefined);
-        this.deckService.userCannotContinue();
       }
     });
   }
