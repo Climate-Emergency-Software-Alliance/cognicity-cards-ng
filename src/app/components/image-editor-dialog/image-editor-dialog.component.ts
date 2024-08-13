@@ -39,16 +39,16 @@ export class ImageEditorDialogComponent {
   }
 
   save(): void {
-    this.dialogRef.close(this.dataURLtoFile(this.croppedImage, 'cropped.png'));
+    this.dialogRef.close();
   }
   
-  imageCropped(event: ImageCroppedEvent) {
-    // this.deckService.setPreview
-    this.croppedImage = event.base64;
-  }
+  // imageCropped(event: ImageCroppedEvent) {
+  //   // this.deckService.setPreview
+  //   this.croppedImage = event.base64;
+  // }
 
   delete() {
-    this.dialogRef.close(undefined);
+    this.dialogRef.close();
   }
 
 }

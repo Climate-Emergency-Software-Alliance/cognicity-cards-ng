@@ -2,12 +2,14 @@
   class='cardContentContainer'
   >
 
-  <div class="backgroundSelectionContainer">
-    <div (click)="setManBackgroundImage()">
+  <div class="bgSelectionContainer">
+    <div class="bgSelectionContainer__SelectionBox" (click)="setManBackgroundImage()">
       <img src="{{manBackgroundSelectorImage}}" (load)="setBoundingRects()" alt="">
+      <span *ngIf="isManBg" class="dot"></span>
     </div>
-    <div (click)="setWomanBackgroundImage()">
+    <div class="bgSelectionContainer__SelectionBox" (click)="setWomanBackgroundImage()">
       <img src="{{womanBackgroundSelectorImage}}" (load)="setBoundingRects()" alt="">
+      <span *ngIf="!isManBg" class="dot"></span>
     </div>
   </div>
 

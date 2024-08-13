@@ -43,13 +43,14 @@ export class ImageUploaderComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.deckService.setPreview(result);
-        this.deckService.updateSignedUrl(result);
-        this.setImagePreview(result);
-      } else {
-        this.deckService.setPreview(undefined);
-      }
+      console.log(result);
+      // if (result) {
+      //   this.deckService.setPreview(result);
+      //   this.deckService.updateSignedUrl(result);
+      //   this.setImagePreview(result);
+      // } else {
+      //   this.deckService.setPreview(undefined);
+      // }
     });
   }
 

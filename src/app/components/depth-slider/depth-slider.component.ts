@@ -12,6 +12,8 @@ export class DepthSliderComponent implements OnInit {
   @ViewChild('sliderZone') sliderZone: ElementRef<HTMLDivElement>;
   @ViewChild('cardContentWrapper') cardContentWrapper: ElementRef<HTMLDivElement>;
 
+  isManBg = true;
+
   constructor(private deckService: DeckService) {}
 
   images = {
@@ -78,12 +80,14 @@ export class DepthSliderComponent implements OnInit {
     this.imageElement.nativeElement.src = this.images.man.sliderBackgroundImage;
     this.manBackgroundSelectorImage = this.images.man.selectorImageSelected;
     this.womanBackgroundSelectorImage = this.images.woman.selectorImage;
+    this.isManBg = true;
   }
 
   setWomanBackgroundImage() {
     this.imageElement.nativeElement.src = this.images.woman.sliderBackgroundImage;
     this.manBackgroundSelectorImage = this.images.man.selectorImage;
     this.womanBackgroundSelectorImage = this.images.woman.selectorImageSelected;
+    this.isManBg = false;
   }
 
   dragStart($event) {

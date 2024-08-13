@@ -78,3 +78,49 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+1. Location - bug: pin location not showing immediately
+
+~~2. Location - Search bar height set to 48~~
+
+~~3. Flood depth - decrease opacity of water to 70% - 80% of what it is now.~~
+
+4. ⁠Flood depth - main image  is currently blurry
+
+5. ⁠Flood depth - main image - new height to be sent by Hafsa 
+
+~~6. ⁠Flood depth - bug: shows in cm before changing to ft in~~
+
+~~7. ⁠Flood depth - dots to be added below gender icons~~
+
+~~8. ⁠Photo - make it optional. Enable next button from the beginning.~~
+
+~~9. ⁠Photo - fix font size of button. ‘Upload image’~~
+
+10. ⁠Photo - bug. When a second photo is replaced by new photo it still shows the previous one in edit 
+
+11. ⁠Photo - being compressed in view. Focus on center point in the viewing square and let the rest not show. So the scale is not off. 
+
+12. Photo - Allow uploading of the entire image not just square. This is done right alright. Don’t change. Remove the cropping out feature, change to focusing in. 
+
+13. ⁠Photo - Edit option needs to be reworked to match figma 
+
+~~14. ⁠Description - ‘enter description here’ a. Fix font color b. Fix font size c. Fix font itself~~
+
+~~15. ⁠Description - remove ‘(optional)’ from copy next to ‘Add description’~~
+
+~~16. ⁠Description - remove ‘a’ from between ‘Add’ and ‘description’~~
+
+~~17. ⁠Description - bug: the character count is a countdown. Make it count up.~~
+
+18. ⁠Desktop Location - Instruction Copy. We want to keep it different. Should read “Click and drag to your pin location” instead of “Move…” 
+
+19. ⁠Overall - Buttons. Both next and back button backgrounds should remain white in full opacity. Just the words should be lesser in opacity 
+
+20. ⁠Overall - Buttons - Next and Back button are not turning green on phone. Works fine on desktop 
+
+21. ⁠Checklist - work to start after Hafsa notifies that screen is ready
+
+22. ⁠Summary - work on this screen once Hafsa has made changes and they have been discussed. 
