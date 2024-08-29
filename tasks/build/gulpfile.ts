@@ -10,7 +10,7 @@ const deploymentMap = {
   us: "USA, riskmap.us",
   id: "Indonesia, petabencana.id",
   ph: "Philippines, mapakalamidad.ph",
-  pk: "Pakistan, tabahinaqsha.pk"
+  pk: "Pakistan, aafatInfo.pk"
 };
 
 if (dep === "jp" || dep === "in" || dep === "us" || dep === "id" || dep === "ph" || dep === "pk") {
