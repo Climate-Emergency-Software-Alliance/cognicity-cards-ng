@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeckService } from '../../../services/cards/deck.service';
 
 @Component({
   selector: 'app-checklist',
@@ -45,14 +46,28 @@ export class ChecklistComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(
+    private decksService: DeckService
+  ) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    const checklistedItems = this.decksService.getFloodChecklistItems();
+
+    this.options.map((i) => {
+      if (checklistedItems.includes(i.title)) {
+        i.selected = true;
+      }
+    })
+  }
 
   onSelect($event) {
     this.options = this.options.map(option => {
       if (option.title === $event.title && option.description === $event.description) {
         option.selected = !option.selected;
+
+        option.selected ? 
+          this.decksService.setFloodChecklistItem(option.title) : 
+          this.decksService.removeFloodChecklistItem(option.title)
       }
 
       return option;

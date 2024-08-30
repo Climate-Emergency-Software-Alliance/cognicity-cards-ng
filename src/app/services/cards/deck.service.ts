@@ -45,6 +45,7 @@ export class DeckService {
   condition: number | undefined = undefined;
   location: LatLng;
   floodDepth: number;
+  floodChecklist: string[] = [];
   fireLocation: LatLng;
   fireRadius: LatLng;
   fireDistance: number;
@@ -429,6 +430,7 @@ export class DeckService {
     switch (this.type) {
       case 'flood':
         summary.card_data.flood_depth = this.floodDepth;
+        summary.card_data.flood_checklist = this.floodChecklist;
         break;
       case 'wind':
         summary.card_data.impact = this.impact;
@@ -576,5 +578,17 @@ export class DeckService {
 
   setPartnerCode(partnerCode: string) {
     this.partnerCode = partnerCode;
+  }
+
+  setFloodChecklistItem(item: string) {
+    this.floodChecklist.push(item);
+  }
+
+  removeFloodChecklistItem(item: string) {
+    this.floodChecklist = this.floodChecklist.filter(i => i !== item);
+  }
+
+  getFloodChecklistItems() {
+    return this.floodChecklist;
   }
 }

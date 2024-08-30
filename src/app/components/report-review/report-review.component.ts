@@ -108,6 +108,10 @@ export class ReportReviewComponent implements OnInit, AfterViewChecked {
     reader.readAsDataURL(file)
   }
 
+  get floodChecklistItems() {
+    return this.deckService.getFloodChecklistItems()
+  }
+
   get description() {
     return this.deckService.getDescription()
   }

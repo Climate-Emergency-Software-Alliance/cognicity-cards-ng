@@ -1,87 +1,22 @@
-<div class="report-review">
-  <div id="preview-img-container" class="report-review__img-container">
-    <img
-      id="preview-img" src="https://via.placeholder.com/150"
-      alt="fire image" class="report-review__img"
-    >
+<div class="review">
+  <div class="review__header">
+    <h2 class="review__header-title">Your Report Summary</h2>
+    <span *ngIf="deckType === 'flood'" class="review__header-floodDepth">{{floodDepth}}</span>
   </div>
-  <div class="report-review__txt">
-    <ng-template [ngIf]="deckType === 'flood'">
-      <div class="report-review__fire">
-        {{ floodKey }}
-        <span class="report-review__fire-dist" [style.color]="floodColor">
-          {{ floodDepth }} cm
-        </span>
-      </div>
-    </ng-template>
 
-    <ng-template [ngIf]="deckType === 'fire'">
-      <div class="report-review__fire">
-        {{ fireKey }}
-        <span class="report-review__fire-dist">
-          {{ fireRange }} {{ fireRangeUnit }}
-        </span>
-      </div>
-    </ng-template>
-
-    <ng-template [ngIf]="deckType === 'haze'">
-      <div class="row" *ngIf="airQuality !== ''">
-        <img id="airquality" src="" alt="Air Quality Indicator">
-        <div>
-          <p>{{ airQualityKey }}</p>
-          <p id="airquality-text">{{ airQuality }}</p>
-        </div>
-      </div>
-      <div class="row">
-        <img id="visibility" src="" alt="Air Quality Indicator">
-        <div>
-          <p> {{ visibilityKey }} </p>
-          <p>{{ visibility }}</p>
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template [ngIf]="deckType === 'road'">
-      <div class="report-review__road-acc">
-        <p>{{ accessibilityKey }} <span [style.color]="accessibilityColor">
-            {{ accessibility }}m
-        </span></p>
-        <p [style.color]="accessibilityColor">{{ accessibilityHint }}</p>
-      </div>
-      <div class="report-review__road-dist">
-        {{ disturbanceKey }} {{ condition }}
-      </div>
-    </ng-template>
-
-    <ng-template [ngIf]="deckType === 'structure'">
-      <div [style.margin-top]="'10px'" >
-        <p> {{ structuralFailureKey }} <span [style.color]="structuralFailureColor">{{ structuralFailure }} </span></p>
-      </div>
-    </ng-template>
-
-    <ng-template [ngIf]="deckType === 'wind'">
-      <div [style.margin-top]="'10px'" >
-        <p> {{ impactKey }} <span [style.color]="impactColor">{{ impact }} </span></p>
-      </div>
-    </ng-template>
-
-    <ng-template [ngIf]="deckType === 'volcano'">
-      {{ volcanoKey }}
-      <p *ngFor="let sign of volcanicSigns" class="evacuation-area" [style.color]="'#31aade'" [style.line-height]="1.5">
-        {{ sign }};
+  <div class="review__summary">
+    <div class="review__summary-img">
+      <img id="preview-img">
+    </div>
+    <div class="review__summary-description">
+      <p>
+        {{description}}
       </p>
-      {{ peopleKey }}
-      <span class="evacuation-number" *ngIf="evacuationNumber" [style.color]="'#31aade'" [style.line-height]="1.5">
-        {{ evacuationNumber }} ;
-      </span>
-      <p> {{ evacuateKey }}</p>
-      <span class="evacuation-area" [style.color]="'#31aade'" [style.line-height]="1.5">
-        {{ evacuationArea }}
-      </span>
-    </ng-template>
-
-    <div class="report-review__txt-desc">
-      {{ description }}
+    </div>
+    <div class="review__summary-tags">
+      <span *ngFor="let selection of floodChecklistItems" class="tag">{{selection}}</span>
     </div>
   </div>
+
+
 </div>

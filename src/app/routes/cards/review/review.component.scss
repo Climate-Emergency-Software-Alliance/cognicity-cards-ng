@@ -6,15 +6,23 @@
   height: 90vh;
 
   &__text, &__text a {
-    color: white;
     text-align: center;
   }
+
   &__text a {
-    text-decoration: underline;
+    text-decoration-line: underline;
+    color: #285642;
     cursor: pointer;
   }
 
   &__text {
+    margin-top: 50px;
+    color: #285642;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 145%;
+
     width: 80%;
     max-width: 400px;
     margin: 15px 0;
