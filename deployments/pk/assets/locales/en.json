@@ -26,6 +26,8 @@
         "firedistance": "Your Location and Fire Location",
         "airquality": "Report Air Quality",
         "visibility": "Report Visibility",
+
+        "checklist": "Check all that apply",
   
         "accessibility": "Report Road Accessibility",
         "condition": "Describe Road Condition",

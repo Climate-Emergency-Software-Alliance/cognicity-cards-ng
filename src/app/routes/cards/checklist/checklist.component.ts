@@ -8,38 +8,38 @@ import { Component, OnInit } from '@angular/core';
 export class ChecklistComponent implements OnInit {
   options = [
     {
-      title: 'Saad Ahmed 1',
-      description: 'My name is Saad Ahmed Siddiqui',
+      title: 'Open Gutter',
+      description: 'Person or bike can fall in',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },
     {
-      title: 'Saad Ahmed 2',
-      description: 'My name is Saad Ahmed Siddiqui',
+      title: 'Wires & Poles',
+      description: 'Risk of electric shock',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },
     {
-      title: 'Saad Ahmed 3',
-      description: 'My name is Saad Ahmed Siddiqui',
+      title: 'Khadda - Pit',
+      description: 'Cars or trucks can fall in',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },
     {
-      title: 'Saad Ahmed4',
-      description: 'My name is Saad Ahmed Siddiqui',
+      title: 'Flooded Underpass',
+      description: 'Vehicles may get stuck',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },
     {
-      title: 'Saad Ahmed 5',
-      description: 'My name is Saad Ahmed Siddiqui',
+      title: 'Blocked Road',
+      description: 'Unable to cross stree ahead',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },
     {
-      title: 'Saad Ahmed 6',
-      description: 'My name is Saad Ahmed Siddiqui',
+      title: 'Nala Overflow',
+      description: 'Sewage Water, Health Hazard',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },
