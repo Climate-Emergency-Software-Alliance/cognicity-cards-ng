@@ -40,7 +40,7 @@ export class DepthSliderComponent implements OnInit {
   currentY: number = 20;
 
   //val that may need to pass to parent comp / DB.
-  depthText: string = (this.currentY * 2) + ' cm';
+  depthText: string = ' ';
 
   toFeet(cm: number): { feet: string; inches: string } {
     let calculation = (cm * 2) / 33.33;
