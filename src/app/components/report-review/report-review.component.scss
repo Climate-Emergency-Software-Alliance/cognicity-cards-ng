@@ -37,7 +37,9 @@
 
   &__summary {
     margin-top: 30px;
-    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
 
     &-img {
       display: flex;
@@ -67,6 +69,8 @@
       flex-direction: column;
       gap: 12px;
       flex-wrap: wrap;
+      align-items: center;
+      align-content: center;
 
       .tag {
         text-align: center;
