@@ -1,29 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DeckService } from './cards/deck.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NavigationService {
   deck: string;
   cardRoutes: string[] = [];
   cardCounter: number;
 
-  constructor(
-    private router: Router,
-    public deckService: DeckService
-  ) { }
+  constructor(private router: Router, public deckService: DeckService) {}
 
   get tabs() {
-    return [this.cardRoutes.length, this.cardCounter]
+    return [this.cardRoutes.length, this.cardCounter];
   }
 
   registerCardRoutes(deck) {
     this.deck = deck;
 
     let cardRoutesConfig;
-    const deckRoutes = this.router.config[2]['_loadedConfig'].routes[0].children;
+    const deckRoutes =
+      this.router.config[2]['_loadedConfig'].routes[0].children;
 
     for (const deckRoute of deckRoutes) {
       if (deckRoute.path === this.deck) {
@@ -45,11 +43,17 @@ export class NavigationService {
   }
 
   filterRoutes(subtype: string) {
-    const mustHaveCard = ["photo", "description", "review", "thank"]
+    const mustHaveCard = ['photo', 'description', 'review', 'thank'];
 
     switch (subtype) {
       case 'road':
-        this.cardRoutes = ['type', 'location', 'accessibility', 'condition', ...mustHaveCard];
+        this.cardRoutes = [
+          'type',
+          'location',
+          'accessibility',
+          'condition',
+          ...mustHaveCard,
+        ];
         break;
       case 'structure':
         this.cardRoutes = ['type', 'location', 'structure', ...mustHaveCard];
@@ -64,44 +68,47 @@ export class NavigationService {
       this.cardCounter = this.getCardIndex(currentRoute);
 
       if (this.cardCounter !== 0) {
-        this.router.navigate([this.cardRoutes[0]], {relativeTo: route});
+        this.router.navigate([this.cardRoutes[0]], { relativeTo: route });
         this.cardCounter = 0;
       }
     } else {
-      this.router.navigate([this.deck + '/' + this.cardRoutes[0]], {relativeTo: route});
+      this.router.navigate([this.deck + '/' + this.cardRoutes[0]], {
+        relativeTo: route,
+      });
       this.cardCounter = 0;
     }
   }
 
-  back(route) {
+  back(route: ActivatedRoute) {
     if (this.cardCounter > 0) {
       const prevCardRoute = this.cardRoutes[this.cardCounter - 1];
-      this.router.navigate([prevCardRoute], {relativeTo: route});
+      this.router.navigate([prevCardRoute], { relativeTo: route });
       this.cardCounter -= 1;
     }
   }
 
   reset(route) {
-    this.router.navigate([this.cardRoutes[0]], {relativeTo: route});
+    this.router.navigate([this.cardRoutes[0]], { relativeTo: route });
     this.cardCounter = 0;
   }
 
   resetEqDeckToLocation(route) {
-    this.router.navigate([this.cardRoutes[1]], {relativeTo: route});
+    this.router.navigate([this.cardRoutes[1]], { relativeTo: route });
     this.cardCounter = 1;
   }
 
-  next(route) {
-      const nextCardRoute = this.cardRoutes[this.cardCounter + 1];
-      this.router.navigate([nextCardRoute], {relativeTo: route});
-      this.cardCounter += 1;
-    }
+  next(route: ActivatedRoute) {
+    const nextCardRoute = this.cardRoutes[this.cardCounter + 1];
+    this.router.navigate([nextCardRoute], { relativeTo: route });
+    this.cardCounter += 1;
+  }
 
   nextFromChild(route, relativePathPrefix) {
-    console.log(route);
-    if (this.cardCounter < (this.cardRoutes.length - 1)) {
+    if (this.cardCounter < this.cardRoutes.length - 1) {
       const nextCardRoute = this.cardRoutes[this.cardCounter + 1];
-      this.router.navigate([relativePathPrefix+nextCardRoute], {relativeTo: route});
+      this.router.navigate([relativePathPrefix + nextCardRoute], {
+        relativeTo: route,
+      });
       this.cardCounter += 1;
     }
   }

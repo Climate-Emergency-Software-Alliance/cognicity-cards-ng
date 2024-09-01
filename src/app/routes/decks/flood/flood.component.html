@@ -143,14 +143,23 @@
   <app-nav-button
     [type]="'left'"
     [text]="'deck.prev' | translate"
-    (navigate)="navController.back(route)"
+    (navigate)="previousPage(route)"
   >
   </app-nav-button>
 
   <app-nav-button
+    *ngIf="!nextIsSubmit"
     [type]="'right'"
     [text]="'deck.next' | translate"
-    (navigate)="navController.next(route)"
+    (navigate)="nextPage(route)"
+  >
+  </app-nav-button>
+
+  <app-nav-button
+    *ngIf="nextIsSubmit"
+    [type]="'default'"
+    [text]="'deck.submit' | translate"
+    (navigate)="submitReport()"
   >
   </app-nav-button>
 </div>

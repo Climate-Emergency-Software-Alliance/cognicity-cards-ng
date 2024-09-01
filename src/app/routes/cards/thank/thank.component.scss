@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  background-color: #808281;
+  background: #285642;
   color: white;
 
   &__img {
@@ -12,7 +12,13 @@
   }
 
   &__title {
-    font-size: 24px;
+    color: #FFF;
+    text-align: center;
+    font-family: Wasa;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 28px */
     margin-bottom: 0;
   }
 
@@ -24,6 +30,7 @@
   }
 
   &__subtitle {
+    margin-top: 16px;
     max-width: 80%;
     text-align: center;
 
@@ -35,6 +42,23 @@
       margin-top: 0;
       margin-bottom: 25px;
     }
+  }
+
+  &__homelink {
+    border-radius: 100px;
+    border: 1px solid #F1F1F1;
+    background: #FFF;
+    box-shadow: 0px 73.673px 21.228px 0px rgba(0, 0, 0, 0.00), 0px 47.451px 18.73px 0px rgba(0, 0, 0, 0.01), 0px 26.223px 16.233px 0px rgba(0, 0, 0, 0.03), 0px 12.487px 12.487px 0px rgba(0, 0, 0, 0.04), 0px 2.497px 6.243px 0px rgba(0, 0, 0, 0.05);
+    color: #285642;
+    text-align: center;
+    font-family: Wasa;
+    font-size: 15.222px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 21.311px */
+    margin-top: 147px;
+    padding: 7.61px 22.83px;
+    text-decoration: none;
   }
 
   &__tips a {
@@ -64,6 +88,21 @@
     &:hover {
       color: #6D6E6D;
       background-color: white;
+    }
+  }
+
+  &__feedback {
+    display: flex;
+    margin-top: 66px;
+    flex-direction: column;
+    justify-content: center;
+
+    span {
+      text-align: center;
+
+      a {
+        color: #fff;
+      }
     }
   }
 }

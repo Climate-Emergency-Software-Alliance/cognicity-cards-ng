@@ -1,17 +1,56 @@
 <div class="thanks">
-  <img [src]="typeImage" alt="success image report" class="thanks__img">
+  <svg
+    width="82"
+    height="80"
+    viewBox="0 0 82 80"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clip-path="url(#clip0_99_4192)">
+      <path
+        d="M44.4186 0C46.4188 0.304248 48.4331 0.516441 50.4037 1.0048C55.3543 2.22959 59.9711 4.23763 64.0933 7.22081C71.0847 12.2807 76.1352 18.8462 78.8953 27.0827C81.6928 35.43 81.8177 43.8335 79.0747 52.1949C75.2974 63.7095 67.7208 71.8789 56.6821 76.7797C50.8343 79.3759 44.6308 80.362 38.2556 79.883C27.117 79.0451 17.8429 74.3566 10.5379 65.9188C5.20339 59.7574 2.07822 52.5428 1.19824 44.4451C0.216843 35.43 1.97992 26.9283 6.75115 19.1817C11.9764 10.6986 19.3486 4.8586 28.8707 1.774C31.7057 0.855014 34.6202 0.397862 37.5535 0H44.4186ZM35.3567 60.7481C35.7202 60.7169 35.9309 60.4345 36.1665 60.2005C38.6504 57.7213 41.1296 55.2405 43.6104 52.7581C50.6861 45.6824 57.7618 38.6067 64.836 31.5294C65.652 30.7119 65.6504 30.5792 64.8391 29.7679C63.4255 28.3512 62.0088 26.9376 60.5936 25.5225C59.7199 24.6488 59.5717 24.6394 58.7167 25.4944C51.2181 32.9898 43.7212 40.4868 36.2242 47.9853C35.3504 48.8591 35.3645 48.8544 34.4923 47.9807C30.6759 44.1518 26.8533 40.3292 23.0307 36.5066C22.3364 35.8139 22.1913 35.8107 21.5111 36.4848C19.9805 38.006 18.4561 39.5319 16.9349 41.061C16.2546 41.7444 16.2624 41.8801 16.9536 42.5744C19.5966 45.2237 22.2397 47.8714 24.8859 50.5192C28.1187 53.7551 31.3531 56.9895 34.5875 60.2223C34.8059 60.4408 35.0056 60.692 35.3536 60.7481H35.3567Z"
+        fill="white"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_99_4192">
+        <rect
+          width="80.1279"
+          height="80"
+          fill="white"
+          transform="translate(0.935547)"
+        />
+      </clipPath>
+    </defs>
+  </svg>
+
   <p class="thanks__title">
-    {{ reportSuccessText.result | translate}}
+    {{ reportSuccessText.result | translate }}
   </p>
   <p class="thanks__subtitle">
-  {{ reportSuccessText.title | translate}} <a href="{{reportUrlText | translate}}">{{reportUrlText | translate}}</a> {{ reportSuccessText.subTitle | translate}}
+    {{ reportSuccessText.title | translate }}
+    <a href="{{ reportUrlText | translate }}">{{
+      reportUrlText | translate
+    }}</a>
+    {{ reportSuccessText.subTitle | translate }}
   </p>
 
-  <p *ngIf="isShowReportAgain" class="thanks__again">
-    {{ reportAgainText | translate}}
+  <!-- <p *ngIf="isShowReportAgain" class="thanks__again">
+    {{ reportAgainText | translate }}
   </p>
   <div *ngIf="isShowReportAgain" class="thanks__btn-group">
-    <a class="thanks__btn" (click)="reportAnotherCard()">{{'card.thank.acceptButton' | translate}}</a>
-    <a class="thanks__btn" (click)="isShowReportAgain = false">{{'card.thank.rejectButton' | translate}}</a>
+    <a class="thanks__btn" (click)="reportAnotherCard()">{{
+      'card.thank.acceptButton' | translate
+    }}</a>
+    <a class="thanks__btn" (click)="isShowReportAgain = false">{{
+      'card.thank.rejectButton' | translate
+    }}</a> -->
+
+  <a class="thanks__homelink" href="">Go back to home page</a>
+
+  <div class="thanks__feedback">
+    <span>Have feedback?</span>
+    <span>Help us make this platform better <a href="">here</a></span>
   </div>
+
 </div>

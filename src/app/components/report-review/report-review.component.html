@@ -1,22 +1,24 @@
 <div class="review">
   <div class="review__header">
     <h2 class="review__header-title">Your Report Summary</h2>
-    <span *ngIf="deckType === 'flood'" class="review__header-floodDepth">{{floodDepth}}</span>
+    <span *ngIf="deckType === 'flood'" class="review__header-floodDepth">{{
+      floodDepth
+    }}</span>
   </div>
 
   <div class="review__summary">
     <div class="review__summary-img">
-      <img id="preview-img">
+      <img id="preview-img" />
     </div>
     <div class="review__summary-description">
       <p>
-        {{description}}
+        {{ description }}
       </p>
     </div>
     <div class="review__summary-tags">
-      <span *ngFor="let selection of floodChecklistItems" class="tag">{{selection}}</span>
+      <span *ngFor="let selection of floodChecklistItems" class="tag">{{
+        selection
+      }}</span>
     </div>
   </div>
-
-
 </div>

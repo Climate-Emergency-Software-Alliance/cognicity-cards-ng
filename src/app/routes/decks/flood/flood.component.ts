@@ -6,18 +6,22 @@ import { NavigationService } from '../../../services/navigation.service';
 import { DeckService } from '../../../services/cards/deck.service';
 import { environment as env } from '../../../../environments/environment';
 
+interface ReportingMode {
+  title: string;
+  subType: 'real' | 'training';
+  className: string;
+}
+
 @Component({
   selector: 'app-flood',
   templateUrl: './flood.component.html',
   styleUrls: ['./flood.component.scss'],
 })
 export class FloodComponent implements OnInit {
-  items: {
-    title: string;
-    subType: 'real' | 'training';
-    className: string;
-  }[];
-  showReportTypeButton: boolean = true
+  items: ReportingMode[];
+  showReportTypeButton: boolean = true;
+  nextIsSubmit = false;
+  isSubmitting = false;
 
   constructor(
     public translate: TranslateService,
@@ -56,13 +60,41 @@ export class FloodComponent implements OnInit {
       {
         title: 'card.type.report.realTypeButton',
         subType: 'real',
-        className: 'reportType_button-main'
+        className: 'reportType_button-main',
       },
       {
         title: 'card.type.report.trainingTypeButton',
         subType: 'training',
-        className: 'reportType_button'
+        className: 'reportType_button',
       },
     ];
+  }
+
+  nextPage(route: ActivatedRoute) {
+    this.navController.next(route);
+    if (this.navController.getCurrentRouteName() === 'review') {
+      this.nextIsSubmit = true;
+    }
+  }
+
+  previousPage(route: ActivatedRoute) {
+    this.navController.back(route);
+  }
+
+  submitReport() {
+    if (this.isSubmitting) return;
+    this.isSubmitting = true;
+
+    this.deckService
+      .submit()
+      .then((resolved) => {
+        this.isSubmitting = false;
+        console.log(resolved);
+        this.navController.next(this.route);
+      })
+      .catch((err) => {
+        this.isSubmitting = false;
+        console.log(err);
+      });
   }
 }

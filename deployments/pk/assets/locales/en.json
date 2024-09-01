@@ -9,7 +9,8 @@
     },
     "deck": {
       "prev": "Back",
-      "next": "Next"
+      "next": "Next",
+      "submit": "Submit"
     },
     "search": {
       "placeholder": "Search Here...",
@@ -43,11 +44,11 @@
         "photo": "Upload a photo that shows rain condition",
         "description": "Add description",
         "review": "Review & Submit",
-        "thank": "Thank you!",
+        "thank": "",
   
         "region": "Select region(s) to receive notifications for",
         "summary": "Review & Submit",
-        "thankyou": "Thank You!"
+        "thankyou": ""
       },
       "type": {
         "fire": {
@@ -167,8 +168,8 @@
       },
       "thank": {
         "result": {
-          "real" : "SUCCESS",
-          "training": "SUCCESS TRAINING"
+          "real" : "Report Submitted Successfully!",
+          "training": "Report Submitted Successfully!"
         },
         "url":{
           "real" : "https://www.aafatInfo.pk",
@@ -177,12 +178,12 @@
         "urlText":"aafatInfo.pk",
         "title": {
           "real" : [
-          "Thank you for your report. Check",
-          "to view your report and see real-time disaster updates."
+          "Thank you for submitting your report and updating others. Check",
+          " for other rain updates."
         ],
         "training" : [
-          "You have completed your training . Check",
-          " to view and share your simulation report!"
+          "Thank you for submitting your report and updating others. Check",
+          " for other rain updates."
         ]
       },
         "subtitle": "Would you like to submit another report?",
