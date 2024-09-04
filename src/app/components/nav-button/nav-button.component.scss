@@ -29,7 +29,7 @@ button {
   }
 
   &:disabled {
-    opacity: 50%;
+    span { opacity: 0.5; }
   }
 
   &.button-default {
@@ -43,8 +43,6 @@ button {
 
   &:focus {
     outline: none;
-    background: #285642;
-    color: white;
   }
 
   &::-moz-focus-inner {

@@ -32,21 +32,30 @@
   }
 
   .depthText {
-    margin-bottom: 40px;
-    border-radius: 11.842px;
+    margin-top: 30px;
+    width: 62.621px;
+    height: 18.305px;
+    border-radius: 7.226px;
     background: #2B7054;
     color: #FFF;
     text-align: center;
     font-family: 'Wasa';
-    font-size: 15.789px;
+
+    padding: 2px 10px;
+    font-size: 11px;
     font-style: normal;
     font-weight: 700;
-    line-height: 140%; /* 22.105px */
-    padding: 4px 17px;
+    line-height: 140%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
   }
 
   .cardContentWrapper{
     position: relative;
+    margin-top: 30px;
     // width: 300px;
     // height: 300px;
 

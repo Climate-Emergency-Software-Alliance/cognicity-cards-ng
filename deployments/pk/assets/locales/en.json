@@ -63,7 +63,7 @@
           "structureTypeButton": "Structural Failure"
         },
         "report":{
-          "realTypeButton": "Report current rain conditions",
+          "realTypeButton": "Report Current Rain Conditions",
           "trainingTypeButton": "Practice reporting instead"
         }
       },

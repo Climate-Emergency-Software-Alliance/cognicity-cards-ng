@@ -34,7 +34,7 @@ export class LocationPickerComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.deckService.userCannotBack();
+    // this.deckService.userCanBack();
     this.checkIsUserAbleToContinue();
 
     let { lat, lng } = env.default_location;
@@ -88,6 +88,8 @@ export class LocationPickerComponent implements OnInit {
 
       if (!this.hasMovedMarkerOnGeolocation) {
         this.hasMovedMarkerOnGeolocation = true;
+        this.deckService.userCanContinue();
+        this.deckService.setLocation({ lat: event.coords.latitude, lng: event.coords.longitude });
 
         setTimeout(() => {
           if (this.currentMarker) this.currentMarker.remove(this.map);

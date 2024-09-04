@@ -53,6 +53,14 @@ export class TitleBoxComponent {
         this.navController.tabs[1] <= this.totalTabs.length
       );
     }
+
+    if (this.deckService.getDeckType() === 'flood') {
+      return (
+        this.navController.tabs[1] >= 0 &&
+        this.navController.tabs[1] < (this.totalTabs.length - 1)
+      )
+    }
+
     return this.navController.tabs[1] < this.totalTabs.length;
   }
 

@@ -24,9 +24,11 @@ export class NavButtonComponent implements OnInit {
 
   ngOnInit() {}
 
-  onClick() {
-    if (this.isDisabled) return
+  onClick(event: MouseEvent) {
+    event.stopPropagation();
+    event.preventDefault();
 
+    if (this.isDisabled) return
     this.navigate.emit()
   }
 }

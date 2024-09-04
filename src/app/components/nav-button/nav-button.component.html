@@ -1,8 +1,10 @@
 <button 
-  type="button" (click)="onClick()" 
+  type="button" (click)="onClick($event)" 
   [disabled]="isDisabled"
   [ngClass]="['button-' + type]"
 >
   <!-- <i [ngClass]="['fa', 'fa-chevron-' + type, 'arrow-' + type]"></i> -->
-  {{ text }}
+  <span>
+    {{ text }}
+  </span>
 </button>
