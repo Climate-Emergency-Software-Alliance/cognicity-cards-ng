@@ -18,9 +18,6 @@ export class ChecklistItemComponent implements OnInit {
   ngOnInit() {}
 
   onSelectItem($event: MouseEvent) {
-    $event.preventDefault();
-    $event.stopImmediatePropagation();
-
     if ($event.type === 'click') {
       return this.onClick.emit({
         title: this.title,

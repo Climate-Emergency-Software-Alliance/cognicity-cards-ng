@@ -591,4 +591,12 @@ export class DeckService {
   getFloodChecklistItems() {
     return this.floodChecklist;
   }
+
+  toFeet(cm: number): { feet: string; inches: string } {
+    let calculation = (cm * 2) / 33.33;
+    let preciseValue = calculation.toFixed(1);
+    let feet = preciseValue.split('.')[0];
+    let inches = preciseValue.split('.')[1];
+    return { feet: `${feet} Ft`, inches: `${inches} In` }
+  }
 }

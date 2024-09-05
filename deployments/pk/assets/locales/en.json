@@ -13,7 +13,7 @@
       "submit": "Submit"
     },
     "search": {
-      "placeholder": "Search Here...",
+      "placeholder": "Search here...",
       "locateText": "Show me where I am"
     },
     "card": {
@@ -41,7 +41,7 @@
         "evacuationnumber": "Report Evacuation",
         "evacuationarea": "Report Evacuation",
   
-        "photo": "Upload a photo that shows rain condition",
+        "photo": "Upload a photo that shows rain conditions",
         "description": "Add description",
         "review": "Review & Submit",
         "thank": "",

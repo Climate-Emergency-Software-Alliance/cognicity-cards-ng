@@ -135,7 +135,8 @@ export class ReportReviewComponent implements OnInit, AfterViewChecked {
   }
 
   get floodDepth() {
-    return this.deckService.getFloodDepth();
+    const data = this.deckService.toFeet(this.deckService.getFloodDepth())
+    return data.feet + ' ' + data.inches;
   }
 
   get floodColor() {

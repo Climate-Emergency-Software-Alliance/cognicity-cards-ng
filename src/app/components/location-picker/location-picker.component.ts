@@ -34,7 +34,7 @@ export class LocationPickerComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.deckService.userCanBack();
+    this.deckService.userCannotBack();
     this.checkIsUserAbleToContinue();
 
     let { lat, lng } = env.default_location;

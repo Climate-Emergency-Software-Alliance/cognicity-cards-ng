@@ -20,7 +20,6 @@ interface ReportingMode {
 export class FloodComponent implements OnInit {
   items: ReportingMode[];
   showReportTypeButton: boolean = true;
-  nextIsSubmit = false;
   isSubmitting = false;
 
   constructor(
@@ -70,11 +69,12 @@ export class FloodComponent implements OnInit {
     ];
   }
 
+  get nextIsSubmit() {
+    return this.navController.getCurrentRouteName() === 'review';
+  }
+
   nextPage(route: ActivatedRoute) {
     this.navController.next(route);
-    if (this.navController.getCurrentRouteName() === 'review') {
-      this.nextIsSubmit = true;
-    }
   }
 
   previousPage(route: ActivatedRoute) {
