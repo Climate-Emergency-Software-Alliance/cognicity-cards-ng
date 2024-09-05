@@ -43,7 +43,7 @@
   
         "photo": "Upload a photo that shows rain conditions",
         "description": "Add description",
-        "review": "Review & Submit",
+        "review": "Please review your report then click submit.",
         "thank": "",
   
         "region": "Select region(s) to receive notifications for",
