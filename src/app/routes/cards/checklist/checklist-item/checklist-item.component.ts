@@ -10,6 +10,7 @@ export class ChecklistItemComponent implements OnInit {
   @Input('description') description: string;
   @Input('imageUrl') imageUrl: string;
   @Input('selected') selected: boolean;
+  @Input('index') index: number;
 
   @Output() onClick = new EventEmitter();
 

@@ -18,12 +18,12 @@ export class DepthSliderComponent implements OnInit {
 
   images = {
     man: {
-      sliderBackgroundImage: 'assets/decks/flood/depth-bg-man.svg',
+      sliderBackgroundImage: 'assets/decks/flood/depth-bg-man.png',
       selectorImage: '/assets/decks/flood/depth-bg-selector-man.svg',
       selectorImageSelected: '/assets/decks/flood/depth-bg-selector-man-selected.svg'
     },
     woman: {
-      sliderBackgroundImage: 'assets/decks/flood/depth-bg-woman.svg',
+      sliderBackgroundImage: 'assets/decks/flood/depth-bg-woman.png',
       selectorImage: '/assets/decks/flood/depth-bg-selector-woman.svg',
       selectorImageSelected: '/assets/decks/flood/depth-bg-selector-woman-selected.svg'
     }

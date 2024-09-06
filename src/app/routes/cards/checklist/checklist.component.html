@@ -1,6 +1,7 @@
 <div class="checklistItems__container">
-    <ng-container *ngFor="let option of options">
+    <ng-container *ngFor="let option of options;index as i">
         <app-checklist-item
+            index="{{i+1}}"
             title="{{option.title}}"
             description="{{option.description}}"
             imageUrl="{{option.imageUrl}}"

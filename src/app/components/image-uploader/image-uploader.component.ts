@@ -21,7 +21,10 @@ export class ImageUploaderComponent implements OnInit {
 
   ngOnInit() {
     this.cachedFile = this.deckService.getPreview();
-    this.setImagePreview(this.cachedFile);
+
+    if (this.cachedFile) {
+      this.setImagePreview(this.cachedFile);
+    }
   }
 
   get isImageSelected(): boolean {
@@ -44,13 +47,6 @@ export class ImageUploaderComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);
-      // if (result) {
-      //   this.deckService.setPreview(result);
-      //   this.deckService.updateSignedUrl(result);
-      //   this.setImagePreview(result);
-      // } else {
-      //   this.deckService.setPreview(undefined);
-      // }
     });
   }
 

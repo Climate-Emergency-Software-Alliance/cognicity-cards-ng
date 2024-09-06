@@ -54,13 +54,6 @@ export class TitleBoxComponent {
       );
     }
 
-    if (this.deckService.getDeckType() === 'flood') {
-      return (
-        this.navController.tabs[1] >= 0 &&
-        this.navController.tabs[1] < (this.totalTabs.length - 1)
-      )
-    }
-
     return this.navController.tabs[1] < this.totalTabs.length;
   }
 
@@ -117,8 +110,11 @@ export class TitleBoxComponent {
   }
 
   get totalTabs(): number[] {
+    
+    let deckType  = this.deckService.getDeckType();
     let offset;
-    if (this.deckService.getDeckType() === "earthquake") {
+
+    if (deckType === "earthquake" || deckType === "flood") {
       offset = 2;
     } else {
       offset = 1;

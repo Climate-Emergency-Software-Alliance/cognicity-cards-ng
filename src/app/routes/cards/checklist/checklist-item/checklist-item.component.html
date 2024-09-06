@@ -1,23 +1,26 @@
-<div class="checklistItem__container">
-  <div
-    (click)="onSelectItem($event)"
-    [ngClass]="{
-      'imgCheckbox': true,
-      'selected': selected
-    }"
-    [ngStyle]="{
-      'background-image': 'url(' + imageUrl + ')'
-    }"
-  >
-    <input
-      type="checkbox"
-      class="imgCheckbox-input"
-      [checked]="selected"
-    />
-  </div>
+<div
+  class="checklistItem__container"
+  [ngStyle]="{
+    'justify-content': index % 2 === 0 ? 'left' : 'right'
+  }"
+>
+  <div>
+    <div
+      (click)="onSelectItem($event)"
+      [ngClass]="{
+        'imgCheckbox': true,
+        'selected': selected
+      }"
+      [ngStyle]="{
+        'background-image': 'url(' + imageUrl + ')'
+      }"
+    >
+      <input type="checkbox" class="imgCheckbox-input" [checked]="selected" />
+    </div>
 
-  <div class="titles">
-    <h3 class="titles-main">{{ title }}</h3>
-    <p class="titles-sub">{{ description }}</p>
+    <div class="titles">
+      <h3 class="titles-main">{{ title }}</h3>
+      <p class="titles-sub">{{ description }}</p>
+    </div>
   </div>
 </div>
