@@ -34,13 +34,13 @@ export class ChecklistComponent implements OnInit {
     },
     {
       title: 'Blocked Road',
-      description: 'Unable to cross stree ahead',
+      description: 'No way to cross street ahead',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },
     {
       title: 'Nala Overflow',
-      description: 'Sewage Water, Health Hazard',
+      description: 'Sewage water. Health hazard',
       imageUrl: 'assets/decks/flood/img.png',
       selected: false
     },

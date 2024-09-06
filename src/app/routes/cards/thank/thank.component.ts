@@ -59,9 +59,14 @@ export class ThankComponent {
     }
   }
 
-  get reportUrlText(): string {
+  get thankLink(): string {
     const reportType = this.deckService.getReportType();
-    return `card.thank.url.${reportType}`;
+    return `card.thank.url.link.${reportType}`;
+  }
+
+  get thankLinkText(): string {
+    const reportType = this.deckService.getReportType();
+    return `card.thank.url.text.${reportType}`;
   }
 
   get reportSuccessText(): {

@@ -47,7 +47,7 @@ export class DepthSliderComponent implements OnInit {
     let preciseValue = calculation.toFixed(1);
     let feet = preciseValue.split('.')[0];
     let inches = preciseValue.split('.')[1];
-    return { feet: `${feet} Ft`, inches: `${inches} In` }
+    return { feet: `${feet} ft`, inches: `${inches} in` }
   }
   
   async ngOnInit() {
