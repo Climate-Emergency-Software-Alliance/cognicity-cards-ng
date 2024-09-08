@@ -57,7 +57,7 @@
 
   #tabContent {
     width: 100%;
-    height: 80%;
+    height: 70%;
     overflow: scroll;
 
     & .termsContents {
@@ -95,11 +95,11 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 15px;
 
     .closeButton {
       width: 160px;
-      height: 48px;
+      height: 45px;
       padding: 7.611px 22.833px;
       color: #FFF;
       border-radius: 100px;
