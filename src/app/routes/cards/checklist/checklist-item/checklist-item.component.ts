@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { event } from 'jquery';
 
 @Component({
   selector: 'app-checklist-item',
@@ -6,6 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./checklist-item.component.scss'],
 })
 export class ChecklistItemComponent implements OnInit {
+  @ViewChild('imageContainerDiv') imageContainerDiv: HTMLDivElement;
   @Input('title') title: string;
   @Input('description') description: string;
   @Input('imageUrl') imageUrl: string;
@@ -19,11 +21,17 @@ export class ChecklistItemComponent implements OnInit {
   ngOnInit() {}
 
   onSelectItem($event: MouseEvent) {
+    console.log($event.type)
+
     if ($event.type === 'click') {
       return this.onClick.emit({
         title: this.title,
         description: this.description
       });
+    }
+
+    if ($event.type === 'touchend' && this.selected) {
+      console.log('touchend');
     }
   }
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 90vw;
- 
+
   &__header {
     text-align: center;
 
@@ -17,13 +17,13 @@
     }
 
     &-floodDepth {
-      margin-top: 30px;
+      margin-top: 15px;
       width: 92.368px;
       height: 27px;
       flex-shrink: 0;
       border-radius: 10.658px;
-      background: #2B7054;
-      color: #FFF;
+      background: #2b7054;
+      color: #fff;
       text-align: center;
       font-family: Wasa;
       font-size: 14.211px;
@@ -32,14 +32,12 @@
       line-height: 140%;
       padding: 4.35px 15.7px 4.35px 15.7px;
     }
-
   }
 
   &__summary {
-    margin-top: 30px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
 
     &-img {
       display: flex;
@@ -61,14 +59,14 @@
       font-style: normal;
       font-weight: 500;
       line-height: 145%;
-      margin-top: 30px;
+      margin-top: 10px;
     }
 
     &-tags {
-      height: 110px;
+      max-height: 110px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 8px;
       flex-wrap: wrap;
       align-items: center;
       align-content: center;
@@ -78,8 +76,8 @@
         width: 140px;
         padding: 4px;
         border-radius: 23px;
-        background: #8BDEBC;
-        color: #2B1A1A;
+        background: #8bdebc;
+        color: #2b1a1a;
         font-size: 14px;
         font-style: normal;
         font-weight: 700;

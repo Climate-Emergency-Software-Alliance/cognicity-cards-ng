@@ -1,5 +1,6 @@
 .checklistItem__container {
   display: flex;
+  outline: none;
 
   .imgCheckbox {
     width: 170px;
@@ -47,12 +48,6 @@
     }
   }
 
-  .imgCheckbox:hover {
-    background: #03824e;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-  }
-
   .selected {
     background: #03824e;
     background-repeat: no-repeat;
@@ -84,23 +79,35 @@
   }
 }
 
+@media (hover: hover) and (pointer: fine) {
+  /* css hover class/style */
+  .checklistItem__container {
+    .imgCheckbox:hover {
+      background: #03824e;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+    }
+  }
+}
+
+
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   .checklistItem__container {
     .imgCheckbox {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
     }
 
     .titles {
-      width: 80px;
+      width: 100px;
 
       .titles-main {
-        font-size: 10px;
+        font-size: 13px;
       }
 
       .titles-sub {
-        font-size: 8px;
+        font-size: 10px;
       }
     }
   }

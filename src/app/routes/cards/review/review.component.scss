@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
 
   &__text,
   &__text a {
@@ -46,6 +45,14 @@
 
 @media (max-width: 481px) {
   .review__text {
+    padding: 10px;
     font-size: 12px;
+  }
+}
+
+
+@media (min-width: 600px) {
+  .review {
+    height: 90vh;
   }
 }
