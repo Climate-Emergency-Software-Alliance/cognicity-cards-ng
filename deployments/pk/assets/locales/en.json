@@ -1,7 +1,7 @@
 {
   "terms": {
-    "userAgreement": "User Agreement",
-    "privacy": "Privacy policy"
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy"
   },
   "validationErrors": {
     "noPhoto": "A photo OR description is required to make a report",

@@ -4,7 +4,7 @@
 
   <p class="review__text" *ngIf="!showWarning">
     {{'card.review.text' | translate}}
-    <a (click)="showTerms()"> {{'card.review.terms' | translate}}</a>
+    <a (click)="openTermsAndPoliciesPopup()"> {{'card.review.terms' | translate}}</a>
   </p>
 
   <div class="review__warning" *ngIf="showWarning">
@@ -19,31 +19,8 @@
     </p>
   </div>
 
-  <div id="termsPopup">
-    <div id="termsHeader">
-      <p> {{'card.review.terms' | translate}} </p>
-    </div>
-    <div id="tabRow">
-      <div
-        *ngFor="let switch of termscontents; let i = index"
-        [ngClass]="switch.tab_key"
-        class="termsTabs"
-        (click)="switchTab(switch.tab_key)"
-      >
-        <p>{{switch.tab_name | translate}}</p>
-      </div>
-    </div>
-    <div id="tabContent">
-      <div
-        repeat.for="content of termscontents"
-        class="termsContents"
-        [innerHTML]="tabContent"
-      ></div>
-    </div>
-    <div id="closeRow">
-      <p (click)="closeTerms()">Close&nbsp;&nbsp;&nbsp;&nbsp;</p>
-    </div>
-  </div>
+  <app-terms-and-policies-popup></app-terms-and-policies-popup>
+
   <!-- <div class="captchaContainer"> 
     <form [formGroup]="captchaForm">
       <ngx-recaptcha2

@@ -9,6 +9,7 @@ import { ReportReviewComponent } from '../../../components/report-review/report-
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { TermsAndPoliciesPopupComponent } from './terms-and-policies-popup/terms-and-policies.component';
 
 @NgModule({
   imports: [
@@ -17,14 +18,16 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     TranslateModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxCaptchaModule
+    NgxCaptchaModule,
   ],
-  declarations: [ReviewComponent, SubmitSwipeComponent, SubmitButtonComponent , ReportReviewComponent],
-  exports: [
-    TranslateModule
+  declarations: [
+    ReviewComponent,
+    TermsAndPoliciesPopupComponent,
+    SubmitSwipeComponent,
+    SubmitButtonComponent,
+    ReportReviewComponent,
   ],
-  providers: [
-    TranslatePipe
-  ]
+  exports: [TranslateModule],
+  providers: [TranslatePipe],
 })
-export class ReviewModule { }
+export class ReviewModule {}

@@ -15,7 +15,12 @@
         'background-image': 'url(' + imageUrl + ')'
       }"
     >
-      <input type="checkbox" class="imgCheckbox-input" [checked]="selected" />
+
+      <label class="imgCheckbox__checkbox">
+        <input [checked]="selected" type="checkbox" />
+        <span class="checkmark"></span>
+      </label>
+
     </div>
 
     <div class="titles">

@@ -13,12 +13,37 @@
     font-family: 'Wasa-Bold';
     border-radius: 6.95px;
 
-    &-input {
+    &__checkbox {
       position: absolute;
-      width: 26.063px;
-      height: 26.063px;
       top: 12px;
       left: 10px;
+
+      width: 15.331px;
+      height: 15.331px;
+      border-radius: 1.278px;
+      background: #fff;
+
+      input {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+      }
+
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .checkmark:after {
+        content: '✓';
+        position: absolute;
+        color: #285642;
+        top: -3px;
+        left: 2px;
+      }
+
+      .checkmark:after {
+        display: none;
+      }
     }
   }
 
@@ -59,9 +84,30 @@
   }
 }
 
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .checklistItem__container {
+    .imgCheckbox {
+      width: 80px;
+      height: 80px;
+    }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+    .titles {
+      width: 80px;
+
+      .titles-main {
+        font-size: 10px;
+      }
+
+      .titles-sub {
+        font-size: 8px;
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
   .checklistItem__container {
     .imgCheckbox {
       width: 100px;
@@ -82,44 +128,53 @@
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
   .checklistItem__container {
     .imgCheckbox {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
     }
-  }
-}
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .checklistItem__container {
-    .imgCheckbox {
-      .imgCheckbox {
-        width: 180px;
-        height: 180px;
+    .titles {
+      width: 140px;
+
+      .titles-main {
+        font-size: 15px;
+      }
+
+      .titles-sub {
+        font-size: 12px;
       }
     }
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
   .checklistItem__container {
     .imgCheckbox {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
+    }
+
+    .titles {
+      width: 180px;
+
+      .titles-main {
+        font-size: 16px;
+      }
+
+      .titles-sub {
+        font-size: 13px;
+      }
     }
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .checklistItem__container {
-    .imgCheckbox {
-      width: 225px;
-      height: 225px;
-    }
-  }
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
 }
