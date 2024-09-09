@@ -86,3 +86,59 @@
     }
   }
 }
+
+@media (min-width: 320px) {
+  .review {
+    &__header {
+      text-align: center;
+
+      &-title {
+        font-size: 2vh;
+        line-height: 100%; /* 28px */
+      }
+
+      &-floodDepth {
+        margin-top: 10px;
+        height: 22px;
+        font-size: 11px;
+        line-height: 100%;
+      }
+    }
+
+    &__summary {
+      margin-top: 10px;
+
+      &-img {
+
+        img {
+          border-radius: 12.682px;
+          width: 140px;
+          height: 140px;
+        }
+      }
+
+      &-description {
+        font-size: 1.5vh;
+        line-height: 100%;
+      }
+
+      &-tags {
+        max-height: 110px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+
+        .tag {
+          width: 140px;
+          padding: 3px;
+          border-radius: 23px;
+          font-size: 1.5vh;
+          line-height: 100%; /* 20.3px */
+        }
+      }
+    }
+  }
+}

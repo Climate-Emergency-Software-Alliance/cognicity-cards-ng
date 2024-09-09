@@ -3,8 +3,8 @@
   outline: none;
 
   .imgCheckbox {
-    width: 170px;
-    height: 170px;
+    width: 15vh;
+    height: 15vh;
     cursor: pointer;
     color: #fff;
     position: relative;
@@ -90,30 +90,29 @@
   }
 }
 
-
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   .checklistItem__container {
     .imgCheckbox {
-      width: 100px;
-      height: 100px;
+      width: 12vh;
+      height: 12vh;
     }
 
     .titles {
-      width: 100px;
+      width: 12vh;
 
       .titles-main {
-        font-size: 13px;
+        font-size: 1.75vh;
       }
 
       .titles-sub {
-        font-size: 10px;
+        font-size: 1.5vh;
       }
     }
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 450px) {
   /* smartphones, Android phones, landscape iPhone */
   .checklistItem__container {
     .imgCheckbox {
