@@ -51,6 +51,16 @@
       }
     }
 
+    &-empty-label {
+      color: #A2A2A2;
+      text-align: center;
+      font-family: Wasa;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 145%; /* 20.3px */
+    }
+
     &-description {
       color: #285642;
       text-align: center;
@@ -63,6 +73,7 @@
     }
 
     &-tags {
+      margin-top: 10px;
       max-height: 110px;
       display: flex;
       flex-direction: column;

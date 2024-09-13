@@ -13,6 +13,8 @@ export class ReportReviewComponent implements OnInit, AfterViewChecked {
   previewImg: HTMLImageElement
   previewImgContainer: HTMLDivElement
 
+  hasPreview = true;
+
   constructor(
     public deckService: DeckService,
     private cdRef: ChangeDetectorRef,
@@ -39,7 +41,11 @@ export class ReportReviewComponent implements OnInit, AfterViewChecked {
       switch (this.deckService.getDeckSubType()) {
         case 'fire': previewImgSrc = '../../../assets/decks/fire/review/Fire.png'; break;
         case 'volcano': previewImgSrc = '../../../assets/decks/volcano/review/volcano.png'; break;
-        case 'flood': previewImgSrc = '../../../assets/decks/flood/review/flood_card_ph.svg'; break;
+        case 'flood': {
+          this.hasPreview = false;
+          previewImgSrc = '../../../assets/decks/flood/review/flood_card_ph.svg';
+          break;
+        }
         case 'haze': previewImgSrc = [
           "../../../../assets/decks/fire/visibility/Visibility_High.jpg",
           "../../../../assets/decks/fire/visibility/Visibility_Medium.jpg",

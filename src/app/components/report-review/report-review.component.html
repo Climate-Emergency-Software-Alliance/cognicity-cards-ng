@@ -7,15 +7,20 @@
   </div>
 
   <div class="review__summary">
-    <div class="review__summary-img">
+    <span class="review__summary-empty-label" *ngIf="!hasPreview">No Photos Uploaded</span>
+    <div class="review__summary-img" [ngStyle]="{'display': hasPreview ? 'flex': 'none' }">
       <img id="preview-img" />
     </div>
-    <div class="review__summary-description">
+
+    <span class="review__summary-empty-label" *ngIf="description.length === 0">No description Added</span>
+    <div class="review__summary-description" *ngIf="description.length > 0">
       <p>
         {{ description }}
       </p>
     </div>
-    <div class="review__summary-tags">
+
+    <span class="review__summary-empty-label" *ngIf="floodChecklistItems.length === 0">No Specific Rain Scenario Checked</span>
+    <div class="review__summary-tags" *ngIf="floodChecklistItems.length > 0">
       <span *ngFor="let selection of floodChecklistItems" class="tag">{{
         selection
       }}</span>
