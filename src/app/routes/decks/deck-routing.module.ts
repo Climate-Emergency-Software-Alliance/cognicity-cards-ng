@@ -12,6 +12,7 @@ import { environment as env } from '../../../environments/environment';
 import { AuthService } from '../../services/auth.service';
 import { DeckComponent } from './deck.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
@@ -45,6 +46,11 @@ const routes: Routes = [
   {
     path: 'privacy-policy',
     component: PrivacyPolicyComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'terms-of-service',
+    component: TermsOfServiceComponent,
     pathMatch: 'full'
   }
 ];
