@@ -13,18 +13,20 @@ const routes: Routes = [
   {
     path: ':otl',
     loadChildren: './routes/decks/deck.module#DeckModule',
-    data: {decks: env.supportedDecks}
+    data: { decks: env.supportedDecks },
   },
-  { path: '**', component: ErrorComponent, data: {error: 'pageNotFound'} }
+  { path: '**', component: ErrorComponent, data: { error: 'pageNotFound' } },
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes, {
-    onSameUrlNavigation: 'reload',
-    enableTracing: false,
-    preloadingStrategy: PreloadCardsService
-  }) ],
-  exports: [ RouterModule ],
-  providers: [ PreloadCardsService ]
+  imports: [
+    RouterModule.forRoot(routes, {
+      onSameUrlNavigation: 'reload',
+      enableTracing: false,
+      preloadingStrategy: PreloadCardsService,
+    }),
+  ],
+  exports: [RouterModule],
+  providers: [PreloadCardsService],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

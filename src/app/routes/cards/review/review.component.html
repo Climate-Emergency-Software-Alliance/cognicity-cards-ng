@@ -1,23 +1,24 @@
 <div class="review">
-  <app-report-review>
-  </app-report-review>
+  <app-report-review> </app-report-review>
 
-  <p class="review__text" *ngIf="!showWarning">
-    {{'card.review.text' | translate}}
-    <a (click)="openTermsAndPoliciesPopup()"> {{'card.review.terms' | translate}}</a>
+  <p class="review__text">
+    {{ 'card.review.text' | translate }}
+    <a (click)="openTermsAndPoliciesPopup()">
+      {{ 'card.review.terms' | translate }}</a
+    >
   </p>
 
-  <div class="review__warning" *ngIf="showWarning">
+  <!-- <div class="review__warning" *ngIf="showWarning">
     <p *ngIf="isDescriptionAndPhotoEmpty">
       <i class="fa fa-exclamation-circle"></i>
-      {{'validationErrors.noPhoto' | translate}}
+      {{ 'validationErrors.noPhoto' | translate }}
     </p>
     <p *ngIf="!isPermittedLocation">
       <i class="fa fa-exclamation-circle"></i>
-      {{'validationErrors.unsupportedLocation' | translate }}
+      {{ 'validationErrors.unsupportedLocation' | translate }}
       Unsupported location, report cannot be displayed on the map
     </p>
-  </div>
+  </div> -->
 
   <app-terms-and-policies-popup></app-terms-and-policies-popup>
 

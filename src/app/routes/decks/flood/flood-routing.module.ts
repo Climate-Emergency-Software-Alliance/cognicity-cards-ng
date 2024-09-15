@@ -8,18 +8,18 @@ const routes: Routes = [
   {
     path: '',
     component: FloodComponent,
-    children: env['supportedCards']['flood']
+    children: env['supportedCards']['flood'],
   },
-  // Optional, redirectTo first card in prep
+  // Optional, redirectTo first card in prep  
   {
     path: '**',
     redirectTo: 'location',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class FloodRoutingModule { }
+export class FloodRoutingModule {}

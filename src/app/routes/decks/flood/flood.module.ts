@@ -10,20 +10,9 @@ import { FloodComponent } from './flood.component';
 import { UtilsModule } from '../utils.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FloodRoutingModule,
-    TranslateModule,
-    UtilsModule
-  ],
-  declarations: [
-    FloodComponent,
-  ],
-  exports: [
-    TranslateModule
-  ],
-  providers: [
-    TranslatePipe
-  ]
+  imports: [CommonModule, FloodRoutingModule, TranslateModule, UtilsModule],
+  declarations: [FloodComponent],
+  exports: [TranslateModule],
+  providers: [TranslatePipe],
 })
-export class FloodModule { }
+export class FloodModule {}

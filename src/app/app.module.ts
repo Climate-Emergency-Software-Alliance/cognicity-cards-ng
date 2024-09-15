@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgxCaptchaModule } from "ngx-captcha";
+import { NgxCaptchaModule } from 'ngx-captcha';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { ErrorComponent } from './routes/error/error.component';
 import { ThanksComponent } from './routes/thanks/thanks.component';
 import { DepthBgComponent } from './components/depth-bg/depth-bg.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, '../../../../assets/locales/', '.json');
@@ -39,11 +39,11 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
