@@ -53,6 +53,7 @@
     background: #03824e;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
+    background-size: contain;
   }
 
   .titles {
@@ -85,6 +86,7 @@
   .checklistItem__container {
     .imgCheckbox:hover {
       background: #03824e;
+      background-size: contain;
       background-repeat: no-repeat;
       background-blend-mode: multiply;
     }
