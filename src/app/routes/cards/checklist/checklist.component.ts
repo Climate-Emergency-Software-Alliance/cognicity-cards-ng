@@ -11,37 +11,37 @@ export class ChecklistComponent implements OnInit {
     {
       title: 'Open Gutter',
       description: 'Person or bike can fall in',
-      imageUrl: 'assets/decks/flood/img.png',
+      imageUrl: 'assets/decks/flood/checklist/open_gutter.png',
       selected: false
     },
     {
       title: 'Wires & Poles',
       description: 'Risk of electric shock',
-      imageUrl: 'assets/decks/flood/img.png',
+      imageUrl: 'assets/decks/flood/checklist/wires_poles.png',
       selected: false
     },
     {
       title: 'Khadda - Pit',
       description: 'Cars or trucks can fall in',
-      imageUrl: 'assets/decks/flood/img.png',
+      imageUrl: 'assets/decks/flood/checklist/broken_road.png',
       selected: false
     },
     {
       title: 'Flooded Underpass',
       description: 'Vehicles may get stuck',
-      imageUrl: 'assets/decks/flood/img.png',
+      imageUrl: 'assets/decks/flood/checklist/flooded_u.png',
       selected: false
     },
     {
       title: 'Blocked Road',
       description: 'No way to cross street ahead',
-      imageUrl: 'assets/decks/flood/img.png',
+      imageUrl: 'assets/decks/flood/checklist/blocked_road.png',
       selected: false
     },
     {
       title: 'Nala Overflow',
       description: 'Sewage water. Health hazard',
-      imageUrl: 'assets/decks/flood/img.png',
+      imageUrl: 'assets/decks/flood/checklist/nala.png',
       selected: false
     },
   ];
