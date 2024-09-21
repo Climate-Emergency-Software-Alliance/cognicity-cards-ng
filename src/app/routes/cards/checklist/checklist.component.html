@@ -1,5 +1,4 @@
-<div class="checklistItems__container">
-    <ng-container *ngFor="let option of options;index as i">
+<!-- <ng-container *ngFor="let option of options;index as i">
         <app-checklist-item
             index="{{i+1}}"
             title="{{option.title}}"
@@ -8,5 +7,31 @@
             [selected]="option.selected"
             (onClick)="onSelect($event)">
         ></app-checklist-item>
-    </ng-container>
+    </ng-container> -->
+
+<div class="checklistItems">
+  <div
+    (click)="onSelect(option)"
+    class="checklistItem"
+    *ngFor="let option of options; index as i"
+    [ngStyle]="{
+      'align-items': isTwoColumn ? (i % 2 === 0 ? 'end' : 'start') : ''
+    }"
+  >
+    <div
+      class="checklistItem__imgCheckbox"
+      [ngClass]="{ selected: option.selected }"
+    >
+      <img src="{{ option.imageUrl }}" alt="" />
+      <label class="checklistItem__imgCheckbox-check">
+        <input type="checkbox" [checked]="option.selected" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+    <div class="checklistItem__titles">
+      <h3>{{ option.title }}</h3>
+      <p>{{ option.description }}</p>
+    </div>
+  </div>
 </div>

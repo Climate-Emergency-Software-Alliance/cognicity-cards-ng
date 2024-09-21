@@ -7,6 +7,9 @@ import { DeckService } from '../../../services/cards/deck.service';
   styleUrls: ['./checklist.component.scss']
 })
 export class ChecklistComponent implements OnInit {
+  isTwoColumn = false;
+  isThreeColumn = false;
+
   options = [
     {
       title: 'Open Gutter',
@@ -58,6 +61,9 @@ export class ChecklistComponent implements OnInit {
         i.selected = true;
       }
     })
+
+    this.isTwoColumn = window.screen.width < 600;
+    this.isThreeColumn = window.screen.height >= 600;
   }
 
   onSelect($event) {
